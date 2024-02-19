@@ -23,50 +23,183 @@
 }
 
 /* basics */
-
-
-
-/* navigationsbar */
-.laptopnav{
-    width: 100%;
-    height: 70px;
-    background-color: var(--purple);
+body{
+    background-color: var(--bg-secondary);
     color: var(--text-primary);
+}
+
+/* navigation og burger */
+nav {
+    background-color: var(--purple);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1vh 2vw;
     border-bottom: #1d0a24 2px solid;
     box-shadow: 0px 10px 4px var(--dropshadow);
 }
 
-.laptopnav img{ /* størrelse på alle ikoner */
+.logo img {
     height: 4vh;
     width: auto;
 }
 
-.logo{
+.nav-links img{
+    height: 4vh;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
     display: flex;
-    align-items: center;
+}
+
+.nav-links li {
+    padding: 0 1vw;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-primary)
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line1, .line2, .line3 {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary);
+    margin: 5px;
+}
+
+/* burger animation */ 
+.burger .line1, .burger .line2, .burger .line3 {
+    transition: all 0.3s ease;
+}
+
+.burger.active .line1 {
+    transform: translateY(13px) rotate(45deg);
+}
+
+.burger.active .line2 {
+    opacity: 0;
+}
+
+.burger.active .line3 {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+/* landing billede og tekstboks! */
+
+.landing{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top:3vh;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 6vh;
 }
 
-.navlinks{
+.landingpic{
+    width: 75%;
+    height: 500px; /* kan fjernes når billede indsættes*/
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    justify-content: center;
+    background-color: var(--pale-pink);
+    border-radius: 20px;
+    border: var(--text-primary) 2px solid;
+    box-shadow: -10px 10px 4px var(--dropshadow);
 }
 
-.link{
-    text-align: center;
-    margin: 0 1vw;
+.overlay {
+    position: absolute;
+    bottom: 5vh; /* Adjust as needed */
+    right: 15vw; /* Adjust as needed */
+    z-index: 1; /* Ensure text is on top of the image */
+  }
+
+  .windowsborder{
+    width: 25%;
+    height: 30vh;
+    display: flex;
+    align-items:end;
+    border-radius: 20px;
+    background-color: var(--purple);
+    border: var(--text-primary) 2px solid;
+    box-shadow: -10px 10px 4px var(--dropshadow);
+  }
+
+  .indhold{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    background-color: var(--bg-primary);
+    border-radius: 0 0 20px 20px;
+  }
+
+  .indhold p{
+    padding: 2vh 2vw;
+  }
+
+  
+
+
+
+/* media query - til mobil */
+@media screen and (max-width: 700px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+        z-index: 555; /* så ikonet kan ses over post-it papiret lol */
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    /* the post-it burger */
+    nav.active .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--yellow);
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 200px;
+        height:160px;
+        z-index: 1;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        border: var(--text-primary) 2px solid;
+        box-shadow: -10px 10px 4px var(--dropshadow);
+    }
+
+    nav.active .nav-links li {
+        padding: 10px;
+    }
+
+    nav.active .nav-links a {
+        color: var(--text-primary);
+    }
+
+    .nav-links img{
+        display: none;
+    }
 }
 
+/* media query - til desktop */
+@media screen and (min-width: 701px) {
 
-
-
-/* burger */ 
-
-
-
+}
+    
   
     
