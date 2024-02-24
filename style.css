@@ -12,88 +12,74 @@
     --text-primary: #1d0a24; /*dark text */
     --text-secondary: #fefbfb; /*light text*/
     --bg-primary: #fefbfb; /*white-ish*/
-    --bg-secondary: #fef8e7; /* pale yellow */
+    --bg-secondary: #fef8e7; /* pale yellow bg til aller bag main vindue*/
     --pink: #e58fab; 
     --pale-pink: #f5d6e0;
     --purple: #8864e3;
-    --pale-purple: #bda9ef;
+    --pale-purple: #bda9ef; /* bg farve til main window */
+    --purple-bg: hsla(257, 69%, 80%, 0.35);
     --yellow: #f9e095;
     --pale-yelloW: #fcf1cf; 
+    --dark-yellow: #f7d56e;
     --dropshadow: #1d0a244f; 
+    --button: #bda9ef;
 }
 
 /* basics */
+html {
+    scroll-behavior: smooth;
+   }
+
 body{
     background-color: var(--bg-secondary);
     color: var(--text-primary);
 }
 
-/* navigation og burger */
-nav {
+/* main window */
+
+.mainwindow {
+    background-color: var(--purple-bg);
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: var(--text-primary) 2px solid;
+    padding-bottom: 100px;
+}
+
+.windowcontainer{
     background-color: var(--purple);
+    border-radius: 17px 17px 0 0;
+    border-bottom: var(--text-primary) 2px solid;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1vh 2vw;
-    border-bottom: #1d0a24 2px solid;
-    box-shadow: 0px 10px 4px var(--dropshadow);
+    justify-content: space-between;
+    padding: 5px 20px; /* Adjust padding as needed */
 }
 
-.logo img {
-    height: 4vh;
-    width: auto;
+.logo{
+    width: 20px;
+    height: 20px;
 }
 
-.nav-links img{
-    height: 4vh;
-    width: auto;
+.browsericons img {
+    width: 20px; /* Adjust width of the icons */
+    height: 20px;
+    margin-right: 10px; /* Adjust margin between icons */
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-}
 
-.nav-links li {
-    padding: 0 1vw;
-}
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-primary)
-}
 
-.burger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
 
-.line1, .line2, .line3 {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-primary);
-    margin: 5px;
-}
 
-/* burger animation */ 
-.burger .line1, .burger .line2, .burger .line3 {
-    transition: all 0.3s ease;
-}
 
-.burger.active .line1 {
-    transform: translateY(13px) rotate(45deg);
-}
-
-.burger.active .line2 {
-    opacity: 0;
-}
-
-.burger.active .line3 {
-    transform: translateY(-13px) rotate(-45deg);
-}
 
 /* landing billede og tekstboks! */
+
+ /* note to self: landing should be using positon abs and rel in pc 
+ and use flex column in mobile - so the text box appear beneath the image. */
 
 .landing{
     position: relative;
@@ -110,94 +96,78 @@ nav {
     display: flex;
     justify-content: center;
     background-color: var(--pale-pink);
-    border-radius: 20px;
+    border-radius: 20px; /* yderste bokse har border radius 20 */
     border: var(--text-primary) 2px solid;
-    box-shadow: -10px 10px 4px var(--dropshadow);
+    box-shadow: -4px 4px 4px var(--dropshadow);
 }
 
-.overlay {
+.posrelcontainer{
     position: absolute;
-    bottom: 5vh; /* Adjust as needed */
-    right: 15vw; /* Adjust as needed */
-    z-index: 1; /* Ensure text is on top of the image */
-  }
-
-  .windowsborder{
-    width: 25%;
-    height: 30vh;
-    display: flex;
-    align-items:end;
-    border-radius: 20px;
-    background-color: var(--purple);
+    max-width: 30%;
+    height: auto;
+    left: 15vw;
+    bottom: -5vh;
+    border-radius: 10px; /* inderste bokse har har border radius 10*/
+    background-color: var(--bg-primary);
     border: var(--text-primary) 2px solid;
-    box-shadow: -10px 10px 4px var(--dropshadow);
-  }
+    box-shadow: -4px 4px 4px var(--dropshadow);
+}
+
+.windowsborder{
+    height: 30px;
+    width: 100%;
+    background-color: var(--purple);
+    border-radius: 7px 7px 0 0;
+    border-bottom: var(--text-primary) 2px solid;
+    margin-bottom: 2%;
+}
 
   .indhold{
-    width: 100%;
-    height: 25vh;
-    display: flex;
-    background-color: var(--bg-primary);
-    border-radius: 0 0 20px 20px;
+   padding: 4% 8%;
   }
 
   .indhold p{
-    padding: 2vh 2vw;
+    margin-bottom: 15%;
   }
+
+  .indhold a{
+    position: absolute;
+    right: 5%;
+    bottom: 7%;
+    text-decoration: none;
+    z-index: 444;
+  }
+
+.knap{
+    background-color: var(--button);
+    color: var(--text-primary);
+    box-shadow: -4px 4px 4px var(--dropshadow); /* black box shadow*/
+    border-radius: 10px;
+    border:var(--text-primary) 2px solid;
+    padding: 2% 5%;
+}
+
+
+
 
   
 
 
 
+
 /* media query - til mobil */
 @media screen and (max-width: 700px) {
-    .nav-links {
-        display: none;
-    }
-
-    .burger {
-        display: flex;
-        z-index: 555; /* så ikonet kan ses over post-it papiret lol */
-    }
-
-    .burger-menu {
-        display: none;
-    }
-
-    /* the post-it burger */
-    nav.active .nav-links {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        background-color: var(--yellow);
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 200px;
-        height:160px;
-        z-index: 1;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: center;
-        border: var(--text-primary) 2px solid;
-        box-shadow: -10px 10px 4px var(--dropshadow);
-    }
-
-    nav.active .nav-links li {
-        padding: 10px;
-    }
-
-    nav.active .nav-links a {
-        color: var(--text-primary);
-    }
-
-    .nav-links img{
-        display: none;
-    }
+    
 }
 
 /* media query - til desktop */
 @media screen and (min-width: 701px) {
+    .knap:hover{
+        background-image: linear-gradient(to right, #e58fab, #8864e3);
+        color: var(--text-secondary);
+        box-shadow: -4px 4px 4px var(--dark-yellow);
+        }
+
 
 }
     

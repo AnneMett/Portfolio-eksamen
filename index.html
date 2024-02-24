@@ -16,58 +16,63 @@
 <body>
 
 <header>
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="images/box-solid.svg" alt="Logo"></a> <!--temp billeder-->
-        </div>
-        <ul class="nav-links">
-            <li>   <a href="index.html">
-                <div>
-                    <img src="images/door-open-solid.svg" alt="Forside"><!-- temp billede-->
-                    <p>Forside</p>
-                </div></a> </li>
-            <li>  <a href="projekt.html">
-                <div>
-                    <img src="images/diagram-project-solid.svg" alt="Projekter"><!-- temp billede-->
-                    <p>Projekter</p>
-                </div></a> </li>
-            <li> <a href="about.html">
-                <div>
-                    <img src="images/address-card-regular.svg" alt="about"><!-- temp billede-->
-                    <p>Om mig</p>
-                </div></a> </li>
-        </ul>
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-    </nav>
+    <!-- har valgt at ændre og forkorte layout til kun at være 1 side - forsiden,
+        så føler ikke at navbar er nødvendig. -->
 </header>
-<main>
-    <!-- Landing billede med tekstboks -->
 
-    <div class="landing">
+<main>
+
+    <div class="mainwindow">
+        <div class="windowcontainer">
+        <img class="logo" src="images/minus-solid.svg" alt="logo">
+         <div class="browsericons">
+            <img src="images/minus-solid.svg" alt="minimize">
+            <img src="images/window-restore-regular.svg" alt="maximize">
+            <img src="images/square-xmark-solid.svg" alt="exit window">
+        </div>
+        </div>
+    
+
+    
+    <!-- Landing sektion med billede og tekstboks-->
+
+    <div class="landing"> <!-- yderste boks med position rel-->
+
         <div class="landingpic">
             <img src="#" alt="temporary photo">
         </div>
-        <div class="overlay windowsborder">
+
+        <div class="posrelcontainer"> <!--- position relative container-->
+            <div class="windowsborder"></div>
             <div class="indhold">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                     Accusantium odio ex facilis aliquid perferendis fugiat reprehenderit 
-                     soluta quis eius non ducimus id nulla, eveniet error consequuntur 
-                     incidunt culpa maxime aliquam.</p>
+                <h1>Titel here put smth idk</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Accusantium odio ex facilis aliquid perferendis.</p>
+                <a href="#down" class="knap">Skal vi snakke?</a>
             </div>
         </div>
-    </div>
-    
-    <!--images gallery??? -->
 
+    <!--projekt sektion-->
+
+    <!-- tabs med selve projekter-->
+    <!-- frontsession-->
+
+    <!-- Nippon-->
+    <!-- Ådalen eksamensprojekt -->
+
+    <!-- about sektion-->
+    <!-- tabs med billede om info-->
+    <!-- accordian med info om skills og hobby-->
+
+    <!-- footer med kontakt info -->
+    <div id="down"></div>
+
+</div> <!-- OBS denne div er til at lukke mainwindow-->
 
 </main>
 <footer>
 
-<!-- footer -->
+
 
 </footer>
     
