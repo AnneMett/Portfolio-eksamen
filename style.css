@@ -46,6 +46,7 @@ body{
     border-radius: 20px;
     border: var(--text-primary) 2px solid;
     padding-bottom: 100px;
+    box-shadow: -4px 4px 4px var(--dropshadow);
 }
 
 .windowcontainer{
@@ -70,12 +71,6 @@ body{
 }
 
 
-
-
-
-
-
-
 /* landing billede og tekstboks! */
 
  /* note to self: landing should be using positon abs and rel in pc 
@@ -88,6 +83,7 @@ body{
     margin-top:3vh;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 100px; /* midlertidlig whitespace */
 }
 
 .landingpic{
@@ -148,6 +144,42 @@ body{
 }
 
 
+/* projekt-faner */
+.projektcontainer{
+    width: 100%;
+    height: auto;
+    
+}
+
+.projektsektion{
+    width: 75%;
+    margin: auto;
+    border: var(--text-primary) 2px solid;
+    box-shadow: -4px 4px 4px var(--dropshadow);
+    border-radius: 20px;
+
+}
+
+
+.tab-container {
+    position: relative;
+  }
+  
+  .tab-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .tab-buttons {
+    margin-top: 20px;
+  }
+  
+  /* Only showing the first tab initially */
+  #tab1 {
+    display: block;
+  }
 
 
   

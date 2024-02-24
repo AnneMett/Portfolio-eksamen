@@ -51,8 +51,62 @@
                 <a href="#down" class="knap">Skal vi snakke?</a>
             </div>
         </div>
+    </div>
+    
 
     <!--projekt sektion-->
+
+    <div class="projektcontainer">
+    <div class="projektsektion">
+    <div class="windowcontainer">
+        <div></div> <!-- intentionalle empty div for layout purposes-->
+         <div class="browsericons">
+            <img src="images/minus-solid.svg" alt="minimize">
+            <img src="images/window-restore-regular.svg" alt="maximize">
+            <img src="images/square-xmark-solid.svg" alt="exit window">
+        </div>
+    </div>
+
+        <sektion class="projektintro">
+        <h2>Projekter</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quibusdam necessitatibus, 
+            at consequuntur doloremque nulla soluta iusto magnam voluptatibus incidunt odio quae 
+            iste dicta autem, harum atque, est maxime. Dolorum?</p>
+        </sektion>
+
+<!-- selve tab siderne -->
+
+        <div class="projekttabs">
+
+            <div class="tab-buttons"> <!-- til JavaScript funktion-->
+                <button onclick="showTab('tab1')">Project 1</button>
+                <button onclick="showTab('tab2')">Project 2</button>
+                <button onclick="showTab('tab3')">Project 3</button>
+              </div>
+
+
+            <div class="tab-container">
+                <div id="tab1" class="tab-content">
+                  <!-- Content for tab 1 -->
+                  <h2>Project 1</h2>
+                  <p>This is the content for project 1.</p>
+                </div>
+                <div id="tab2" class="tab-content">
+                  <!-- Content for tab 2 -->
+                  <h2>Project 2</h2>
+                  <p>This is the content for project 2.</p>
+                </div>
+
+                <div id="tab3" class="tab-content">
+                  <!-- Content for tab 3 -->
+                  <h2>Project 3</h2>
+                  <p>This is the content for project 3.</p>
+                </div>
+              </div>
+         
+        </div>
+    </div>
+    </div>
 
     <!-- tabs med selve projekter-->
     <!-- frontsession-->
