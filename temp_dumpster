@@ -1,0 +1,121 @@
+<sektion class="projektintro"> <!-- kort beskrivelse -->
+    <h2>Projekter</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quibusdam necessitatibus, 
+        at consequuntur doloremque nulla soluta iusto magnam voluptatibus incidunt odio quae 
+        iste dicta autem, harum atque, est maxime. Dolorum?</p>
+    </sektion>
+   
+<div class="projektfolder"> <!-- til str på projekt 'mappen' -->
+<div class="projekttabs"> <!-- til layout-->
+<div class="tab-buttons"> <!-- til JavaScript funktion-->
+    <button class="tab active" onclick="showTab('tab1')">Project 1</button>
+    <button class="tab" onclick="showTab('tab2')">Project 2</button>
+    <button class="tab" onclick="showTab('tab3')">Project 3</button>
+</div>
+</div>
+
+
+<div class="tab-container"> <!-- -->
+<div id="tab1" class="tab-content">
+    <h3>London</h3>
+    <p>London is the capital city of England.</p>
+</div>
+
+<div id="tab2" class="tab-content">
+    <h3>Paris</h3>
+    <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="tab3" class="tab-content">
+    <h3>Tokyo</h3>
+    <p>Tokyo is the capital of Japan.</p>
+</div>
+</div>
+</div>
+
+
+
+<style>
+    .tab-buttons {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab-buttons button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab-buttons button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab.active {
+    background-color:var(--pale-yelloW); 
+  }
+  
+  /* Style the tab content */
+  .tab-content {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+ #tab1 {
+    display: block;
+  } 
+</style>
+
+
+
+<script>
+    // Funktion til at initialisere fanerne og sætte den første fane som aktiv
+function initializeTabs() {
+  // Hent den første fane-knap
+  var defaultTab = document.querySelector('.tab-buttons .tab');
+  var defaultTabId = defaultTab.getAttribute('data-tab');
+  showTab(defaultTabId); // Aktiver den første fane
+}
+
+// Funktion til at vise fanens indhold med det givne fane-ID.
+// Denne funktion sikrer, at mindst én fane altid er åben.
+function showTab(tabId) {
+  var tabToShow = document.getElementById(tabId);
+
+  // Skjul alt faneindhold
+  var tabContents = document.getElementsByClassName("tab-content");
+  for (var i = 0; i < tabContents.length; i++) {
+    tabContents[i].style.display = "none";
+  }
+
+  // Fjern "active" klassen fra alle faneknapper
+  var tabLinks = document.getElementsByClassName("tab");
+  for (var i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].classList.remove("active");
+  }
+
+  // Vis det valgte faneindhold
+  tabToShow.style.display = "block";
+
+  // Tilføj "active" klassen til den klikkede faneknap
+  var clickedTab = document.querySelector('[data-tab="' + tabId + '"]');
+  clickedTab.classList.add("active");
+}
+
+// Initialiser faner ved siden af sidebelastning
+window.onload = function() {
+  initializeTabs();
+};
+
+</script>

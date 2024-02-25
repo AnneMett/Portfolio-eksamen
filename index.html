@@ -55,64 +55,86 @@
     
 
     <!--projekt sektion-->
+    <!--  referance: https://www.w3schools.com/howto/howto_js_tabs.asp -->
 
-    <div class="projektcontainer">
-    <div class="projektsektion">
-    <div class="windowcontainer">
-        <div></div> <!-- intentionalle empty div for layout purposes-->
-         <div class="browsericons">
-            <img src="images/minus-solid.svg" alt="minimize">
-            <img src="images/window-restore-regular.svg" alt="maximize">
-            <img src="images/square-xmark-solid.svg" alt="exit window">
+    <div class="projektcontainer"> <!-- yderste boks til layout-->
+        <div class="projektsektion"> <!-- til str på vindue-->
+        <div class="windowcontainer"> <!-- til lilla header-->
+            <div></div> <!-- intentionalle empty div for layout purposes-->
+             <div class="browsericons">
+                <img src="images/minus-solid.svg" alt="minimize">
+                <img src="images/window-restore-regular.svg" alt="maximize">
+                <img src="images/square-xmark-solid.svg" alt="exit window">
+            </div>
         </div>
-    </div>
 
-        <sektion class="projektintro">
-        <h2>Projekter</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quibusdam necessitatibus, 
-            at consequuntur doloremque nulla soluta iusto magnam voluptatibus incidunt odio quae 
-            iste dicta autem, harum atque, est maxime. Dolorum?</p>
-        </sektion>
-
-<!-- selve tab siderne -->
-
-        <div class="projekttabs">
-
-            <div class="tab-buttons"> <!-- til JavaScript funktion-->
-                <button onclick="showTab('tab1')">Project 1</button>
-                <button onclick="showTab('tab2')">Project 2</button>
-                <button onclick="showTab('tab3')">Project 3</button>
-              </div>
-
-
-            <div class="tab-container">
-                <div id="tab1" class="tab-content">
-                  <!-- Content for tab 1 -->
-                  <h2>Project 1</h2>
-                  <p>This is the content for project 1.</p>
-                </div>
-                <div id="tab2" class="tab-content">
-                  <!-- Content for tab 2 -->
-                  <h2>Project 2</h2>
-                  <p>This is the content for project 2.</p>
-                </div>
-
-                <div id="tab3" class="tab-content">
-                  <!-- Content for tab 3 -->
-                  <h2>Project 3</h2>
-                  <p>This is the content for project 3.</p>
-                </div>
-              </div>
-         
+        <div class="sektioncontainer"> <!-- til str.-->
+        <sektion class="projektintro"> <!-- til layout-->
+            <h2>Projekter</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quibusdam necessitatibus, 
+                at consequuntur doloremque nulla soluta iusto magnam voluptatibus incidunt odio quae 
+                iste dicta autem, harum atque, est maxime. Dolorum?</p>
+            </sektion>
         </div>
-    </div>
-    </div>
 
-    <!-- tabs med selve projekter-->
-    <!-- frontsession-->
+            
+        <div class="projektfolder"> <!-- til str på projekt 'mappen' -->
+        <div class="projekttabs"> <!-- til layout-->
+        <div class="tab">
+            <button class="tablinks" data-tab="tab1"> Frontsession</button>
+            <button class="tablinks" data-tab="tab2"> Nippon Måltidskasser</button>
+            <button class="tablinks" data-tab="tab3"> Efterskolen Ådalen</button>
+          </div>
+          
 
-    <!-- Nippon-->
-    <!-- Ådalen eksamensprojekt -->
+
+    <!-- tabs med selve projekter -->
+          <!-- Frontsession -->
+          <div id="tab1" class="tabcontent">
+            <h3>Tab 1 Content</h3>
+            <p>This is the content for Tab 1.</p>
+
+            <div class="tabcontainer"> <!-- til flex-->
+                <div class="information"> <!-- til column-->
+                    <div class="smallbox"></div>
+                    <div class="smallbox"></div>
+                </div>
+
+                <div class="pinkfolder"></div>
+            </div>
+
+
+
+
+
+          </div>
+          
+
+          <!-- Nippon-->
+          <div id="tab2" class="tabcontent">
+            <h3>Tab 2 Content</h3>
+            <p>This is the content for Tab 2.</p>
+          </div>
+          
+
+          <!-- Ådalen-->
+          <div id="tab3" class="tabcontent">
+            <h3>Tab 3 Content</h3>
+            <p>This is the content for Tab 3.</p>
+          </div>
+        </div>
+        </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
 
     <!-- about sektion-->
     <!-- tabs med billede om info-->
