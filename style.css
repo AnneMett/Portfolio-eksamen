@@ -39,7 +39,7 @@ body{
 
 .mainwindow {
     background-color: var(--purple-bg);
-    width: 90%;
+    width: 80%;
     height: auto;
     margin: auto;
     margin-top: 10px;
@@ -70,7 +70,6 @@ body{
     margin-right: 10px; /* Adjust margin between icons */
 }
 
-
 /* landing billede og tekstboks! */
 
  /* note to self: landing should be using positon abs and rel in pc 
@@ -87,7 +86,7 @@ body{
 }
 
 .landingpic{
-    width: 75%;
+    width: 80%;
     height: 500px; /* kan fjernes når billede indsættes*/
     display: flex;
     justify-content: center;
@@ -116,6 +115,9 @@ body{
     border-radius: 7px 7px 0 0;
     border-bottom: var(--text-primary) 2px solid;
     margin-bottom: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
   .indhold{
@@ -148,16 +150,17 @@ body{
    
 .projektcontainer{
     width: 100%;
-    height: 800px;
+    height: auto;
     
 }
 
 .projektsektion{
-    width: 75%;
+    width: 80%;
     margin: auto;
     border: var(--text-primary) 2px solid;
     box-shadow: -4px 4px 4px var(--dropshadow);
     border-radius: 20px;
+    background-color: var(--bg-primary);
 
 }
 
@@ -214,6 +217,7 @@ flex-direction: row;
   /* Style the tab content */
   .tabcontent {
     display: none;
+    height: auto;
     padding: 20px;
     border: 2px solid var(--text-primary);
     background-color: var(--pale-yelloW);
@@ -229,12 +233,124 @@ flex-direction: row;
   .tabcontainer{
     display: flex;
     flex-direction: row;
+    height: auto;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   .information{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
+  .smallbox{
+    width: 350px;
+    height: auto;
+    background-color: var(--bg-primary);
+    border-radius: 10px;
+    border: 2px solid var(--text-primary);
+    margin-bottom: 5vh;
+  }
+
+  .smallbox .windowcontainer{
+    border-radius: 10px 10px 0 0;
+  }
+
+  .projektdiscription{
+    width: 100%;
+    height: auto;
+  }
+
+  .projektdescription p{
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+  }
+
+  .imagegallery{
+    width: 100%;
+    height: auto;
+  
+  }
+
+  /* Slideshow container */
+.slideshow-container {
+  width: 90%;
+  position: relative;
+  margin: auto;
+  max-height: 300px;
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 10px 20px;
+  margin-top: -22px;
+  color: var(--text-primary);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: var(--pink);
+  opacity: 0.5;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: var(--pale-pink);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.imagegallery > .active, .dot:hover {
+  background-color: var(--pink);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+
+
+
+
+  .pinkfolder{ /*temp shit so i can see it*/
+    width: 100px;
+    height: 100px;
+    background-color:#e58fab;
+  }
 
 /* media query - til mobil */
 @media screen and (max-width: 700px) {
@@ -242,7 +358,7 @@ flex-direction: row;
 }
 
 /* media query - til desktop */
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 700px) {
     .knap:hover{
         background-image: linear-gradient(to right, #e58fab, #8864e3);
         color: var(--text-secondary);

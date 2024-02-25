@@ -43,7 +43,14 @@
         </div>
 
         <div class="posrelcontainer"> <!--- position relative container-->
-            <div class="windowsborder"></div>
+            <div class="windowsborder">
+                <div></div> <!-- intentionalle empty div for layout purposes-->
+         <div class="browsericons">
+            <img src="images/minus-solid.svg" alt="minimize">
+            <img src="images/window-restore-regular.svg" alt="maximize">
+            <img src="images/square-xmark-solid.svg" alt="exit window">
+        </div>
+            </div>
             <div class="indhold">
                 <h1>Titel here put smth idk</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -53,6 +60,8 @@
         </div>
     </div>
     
+
+
 
     <!--projekt sektion-->
     <!--  referance: https://www.w3schools.com/howto/howto_js_tabs.asp -->
@@ -91,16 +100,109 @@
     <!-- tabs med selve projekter -->
           <!-- Frontsession -->
           <div id="tab1" class="tabcontent">
-            <h3>Tab 1 Content</h3>
-            <p>This is the content for Tab 1.</p>
-
+        
             <div class="tabcontainer"> <!-- til flex-->
                 <div class="information"> <!-- til column-->
-                    <div class="smallbox"></div>
-                    <div class="smallbox"></div>
+                    <div class="smallbox">
+                        <div class="windowcontainer"> <!-- til lilla header-->
+                            <div></div> <!-- intentionalle empty div for layout purposes-->
+                             <div class="browsericons">
+                                <img src="images/minus-solid.svg" alt="minimize">
+                                <img src="images/window-restore-regular.svg" alt="maximize">
+                                <img src="images/square-xmark-solid.svg" alt="exit window">
+                            </div>
+                        </div>
+
+                        <div class="projektdescription">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Veritatis obcaecati iure, doloribus necessitatibus est sunt. 
+                                Repellat, molestiae iste, corporis sequi vero voluptatum fugiat 
+                                officia aspernatur labore magnam sint molestias facere! <br><br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Veritatis obcaecati iure, doloribus necessitatibus est sunt. 
+                                Repellat, molestiae iste, corporis sequi vero voluptatum fugiat 
+                                officia aspernatur labore magnam sint molestias facere!<br><br>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Veritatis obcaecati iure, doloribus necessitatibus est sunt. 
+                                Repellat, molestiae iste, corporis sequi vero voluptatum fugiat 
+                                officia aspernatur labore magnam sint molestias facere!</p>
+                        </div>
+                    </div>
+
+                    <div class="smallbox">
+                        <div class="windowcontainer"> <!-- til lilla header-->
+                            <div></div> <!-- intentionalle empty div for layout purposes-->
+                             <div class="browsericons">
+                                <img src="images/minus-solid.svg" alt="minimize">
+                                <img src="images/window-restore-regular.svg" alt="maximize">
+                                <img src="images/square-xmark-solid.svg" alt="exit window">
+                            </div>
+                        </div>
+
+                        <div class="imagegallery">
+                            
+                            <div class="slideshow-container">
+
+                                <div class="mySlides fade">
+                                  <img src="nippon/nipponmoodboard.jpg">
+                                </div>
+
+                                <div class="mySlides fade">
+                                    <img src="nippon/moodboard.jpg">
+                                  </div>
+                                                                
+                                <div class="mySlides fade">
+                                  <img src="nippon/Artboard1.jpg">
+                                </div>
+                                
+                                <div class="mySlides fade">
+                                  <img src="nippon/Artboard3.jpg">
+                                </div>
+
+                                <div class="mySlides fade">
+                                    <img src="nippon/nipponlogoprocess.jpg">
+                                  </div>
+
+                                  <div class="mySlides fade">
+                                    <img src="nippon/404cups.jpg">
+                                  </div>
+
+                                  <div class="mySlides fade">
+                                    <img src="nippon/404bonsai.jpg">
+                                  </div>
+
+                                
+                                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                <a class="next" onclick="plusSlides(1)">❯</a>
+                                
+                                </div>
+                                <br>
+                                
+                                <div style="text-align:center">
+                                  <span class="dot" onclick="currentSlide(1)"></span> 
+                                  <span class="dot" onclick="currentSlide(2)"></span> 
+                                  <span class="dot" onclick="currentSlide(3)"></span> 
+                                  <span class="dot" onclick="currentSlide(4)"></span> 
+                                  <span class="dot" onclick="currentSlide(5)"></span> 
+                                  <span class="dot" onclick="currentSlide(6)"></span> 
+                                  <span class="dot" onclick="currentSlide(7)"></span> 
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
                 </div>
 
-                <div class="pinkfolder"></div>
+                <div class="pinkfolder"></div> <!-- ugh more folder shit-->
             </div>
 
 
