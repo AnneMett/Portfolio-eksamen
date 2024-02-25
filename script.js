@@ -6,12 +6,12 @@
 document.addEventListener("DOMContentLoaded", function() {
 // Sætter den første fane som aktiv ved sidenbelastning
 // Finder den første faneknap og tilføjer "active" klassen for at markere den som aktiv
-  document.querySelector(".tab button").classList.add("active"); 
+  document.querySelector(".tablinks").classList.add("active"); 
   // Finder det tilsvarende faneelement og tilføjer "active" klassen for at vise dets indhold
   document.getElementById("tab1").classList.add("active"); 
 
   // Tilføjer en hændelseslytter til fane knapperne
-  var tabButtons = document.querySelectorAll(".tab button");
+  var tabButtons = document.querySelectorAll(".tablinks");
   tabButtons.forEach(function(button) {
     button.addEventListener("click", function() {
       // Fjerner "active" klassen fra alle fane knapper og faneelementer
@@ -71,3 +71,31 @@ function showSlides(n) {
 setInterval(function() {
   plusSlides(1); // Ændrer slide med 1
 }, 6000); // Intervallet er 6000 millisekunder (6 sekunder), kan ændres efter behov.
+
+
+// her er til nippon tabs //
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Set the first tab as active on page load
+  document.querySelector(".nipponlinks").classList.add("active");
+  document.getElementById("Nippontab1").classList.add("active");
+
+  // Add event listener to tab buttons
+  var tabButtons = document.querySelectorAll(".nipponlinks");
+  tabButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+      // Remove "active" class from all tab buttons and tab contents
+      tabButtons.forEach(function(btn) {
+        btn.classList.remove("active");
+      });
+      document.querySelectorAll(".nipponcontent").forEach(function(tabContent) {
+        tabContent.classList.remove("active");
+      });
+
+      // Add "active" class to the clicked tab button and corresponding tab content
+      var tabId = this.getAttribute("data-nippon");
+      this.classList.add("active");
+      document.getElementById(tabId).classList.add("active");
+    });
+  });
+});

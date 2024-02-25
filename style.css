@@ -1,315 +1,344 @@
-*{
-    margin:0;
-    padding:0;
-    /*indsæt google fonts her */
+* {
+  margin: 0;
+  padding: 0;
+  /*indsæt google fonts her */
 }
 
 /* Styletile men css */
-:Root{
-    /*font-size: 2vw;
+:Root {
+  /*font-size: 2vw;
     --font-size-primary: 2vw;
     --font-size-secondary:  1.3vw; */
-    --text-primary: #1d0a24; /*dark text */
-    --text-secondary: #fefbfb; /*light text*/
-    --bg-primary: #fefbfb; /*white-ish*/
-    --bg-secondary: #fef8e7; /* pale yellow bg til aller bag main vindue*/
-    --pink: #e58fab; 
-    --pale-pink: #f5d6e0;
-    --purple: #8864e3;
-    --pale-purple: #bda9ef; /* bg farve til main window */
-    --purple-bg: hsla(257, 69%, 80%, 0.35);
-    --yellow: #f9e095;
-    --pale-yelloW: #fcf1cf; 
-    --dark-yellow: #f7d56e;
-    --dropshadow: #1d0a244f; 
-    --button: #bda9ef;
+  --text-primary: #1d0a24;
+  /*dark text */
+  --text-secondary: #fefbfb;
+  /*light text*/
+  --bg-primary: #fefbfb;
+  /*white-ish*/
+  --bg-secondary: #fef8e7;
+  /* pale yellow bg til aller bag main vindue*/
+  --pink: #e58fab;
+  --pale-pink: #f5d6e0;
+  --purple: #8864e3;
+  --pale-purple: #bda9ef;
+  /* bg farve til main window */
+  --purple-bg: hsla(257, 69%, 80%, 0.35);
+  --yellow: #f9e095;
+  --pale-yelloW: #fcf1cf;
+  --dark-yellow: #f7d56e;
+  --dropshadow: #1d0a244f;
+  --button: #bda9ef;
 }
 
 /* basics */
 html {
-    scroll-behavior: smooth;
-   }
+  scroll-behavior: smooth;
+}
 
-body{
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
+body {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 /* main window */
 
 .mainwindow {
-    background-color: var(--purple-bg);
-    width: 80%;
-    height: auto;
-    margin: auto;
-    margin-top: 10px;
-    border-radius: 20px;
-    border: var(--text-primary) 2px solid;
-    padding-bottom: 100px;
-    box-shadow: -4px 4px 4px var(--dropshadow);
+  background-color: var(--purple-bg);
+  width: 80%;
+  height: auto;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: var(--text-primary) 2px solid;
+  padding-bottom: 100px;
+  box-shadow: -4px 4px 4px var(--dropshadow);
 }
 
-.windowcontainer{
-    background-color: var(--purple);
-    border-radius: 17px 17px 0 0;
-    border-bottom: var(--text-primary) 2px solid;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 20px; /* Adjust padding as needed */
+.windowcontainer {
+  background-color: var(--purple);
+  border-radius: 17px 17px 0 0;
+  border-bottom: var(--text-primary) 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  /* Adjust padding as needed */
 }
 
-.logo{
-    width: 20px;
-    height: 20px;
+.logo {
+  width: 20px;
+  height: 20px;
 }
 
 .browsericons img {
-    width: 20px; /* Adjust width of the icons */
-    height: 20px;
-    margin-right: 10px; /* Adjust margin between icons */
+  width: 20px;
+  /* Adjust width of the icons */
+  height: 20px;
+  margin-right: 10px;
+  /* Adjust margin between icons */
 }
 
 /* landing billede og tekstboks! */
 
- /* note to self: landing should be using positon abs and rel in pc 
+/* note to self: landing should be using positon abs and rel in pc 
  and use flex column in mobile - so the text box appear beneath the image. */
 
-.landing{
-    position: relative;
-    display: flex;
-    width: 100%;
-    margin-top:3vh;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 100px; /* midlertidlig whitespace */
+.landing {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-top: 3vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 100px;
+  /* midlertidlig whitespace */
 }
 
-.landingpic{
-    width: 80%;
-    height: 500px; /* kan fjernes når billede indsættes*/
-    display: flex;
-    justify-content: center;
-    background-color: var(--pale-pink);
-    border-radius: 20px; /* yderste bokse har border radius 20 */
-    border: var(--text-primary) 2px solid;
-    box-shadow: -4px 4px 4px var(--dropshadow);
+.landingpic {
+  width: 80%;
+  height: 500px;
+  /* kan fjernes når billede indsættes*/
+  display: flex;
+  justify-content: center;
+  background-color: var(--pale-pink);
+  border-radius: 20px;
+  /* yderste bokse har border radius 20 */
+  border: var(--text-primary) 2px solid;
+  box-shadow: -4px 4px 4px var(--dropshadow);
 }
 
-.posrelcontainer{
-    position: absolute;
-    max-width: 30%;
-    height: auto;
-    left: 15vw;
-    bottom: -5vh;
-    border-radius: 10px; /* inderste bokse har har border radius 10*/
-    background-color: var(--bg-primary);
-    border: var(--text-primary) 2px solid;
-    box-shadow: -4px 4px 4px var(--dropshadow);
+.posrelcontainer {
+  position: absolute;
+  max-width: 30%;
+  height: auto;
+  left: 15vw;
+  bottom: -5vh;
+  border-radius: 10px;
+  /* inderste bokse har har border radius 10*/
+  background-color: var(--bg-primary);
+  border: var(--text-primary) 2px solid;
+  box-shadow: -4px 4px 4px var(--dropshadow);
 }
 
-.windowsborder{
-    height: 30px;
-    width: 100%;
-    background-color: var(--purple);
-    border-radius: 7px 7px 0 0;
-    border-bottom: var(--text-primary) 2px solid;
-    margin-bottom: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.windowsborder {
+  height: 30px;
+  width: 100%;
+  background-color: var(--purple);
+  border-radius: 7px 7px 0 0;
+  border-bottom: var(--text-primary) 2px solid;
+  margin-bottom: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-  .indhold{
-   padding: 4% 8%;
-  }
+.indhold {
+  padding: 4% 8%;
+}
 
-  .indhold p{
-    margin-bottom: 15%;
-  }
+.indhold p {
+  margin-bottom: 15%;
+}
 
-  .indhold a{
-    position: absolute;
-    right: 5%;
-    bottom: 7%;
-    text-decoration: none;
-    z-index: 444;
-  }
+.indhold a {
+  position: absolute;
+  right: 5%;
+  bottom: 7%;
+  text-decoration: none;
+  z-index: 444;
+}
 
-.knap{
-    background-color: var(--button);
-    color: var(--text-primary);
-    box-shadow: -4px 4px 4px var(--dropshadow); /* black box shadow*/
-    border-radius: 10px;
-    border:var(--text-primary) 2px solid;
-    padding: 2% 5%;
+.knap {
+  background-color: var(--button);
+  color: var(--text-primary);
+  box-shadow: -4px 4px 4px var(--dropshadow);
+  /* black box shadow*/
+  border-radius: 10px;
+  border: var(--text-primary) 2px solid;
+  padding: 2% 5%;
 }
 
 
 /*------------------ projekt-faner */
-   
-.projektcontainer{
-    width: 100%;
-    height: auto;
-    
-}
 
-.projektsektion{
-    width: 80%;
-    margin: auto;
-    border: var(--text-primary) 2px solid;
-    box-shadow: -4px 4px 4px var(--dropshadow);
-    border-radius: 20px;
-    background-color: var(--bg-primary);
+.projektcontainer {
+  width: 100%;
+  height: auto;
 
 }
 
-.sektioncontainer, .projektfolder{
-    display: block;
-    width: 100%;
-}
-.projektintro, .projekttabs{
-    display: block;
-    width: 90%;
-    margin:auto;
-    margin: 1.5rem;
+.projektsektion {
+  width: 80%;
+  margin: auto;
+  border: var(--text-primary) 2px solid;
+  box-shadow: -4px 4px 4px var(--dropshadow);
+  border-radius: 20px;
+  background-color: var(--bg-primary);
+
 }
 
-.tab{
-display: flex;
-flex-direction: row;
+.sektioncontainer,
+.projektfolder {
+  display: block;
+  width: 100%;
 }
 
+.projektintro,
+.projekttabs {
+  display: block;
+  margin: auto;
+  margin: 1.5rem;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
+}
+
+.tablinks{
+  background-color: var(--dark-yellow);
+}
 
 /* Style the tab buttons */
 .tab button {
-    background-color: var(--dark-yellow);
-    width: 150px;
-    height: 50px;
-    align-items: center;
-    display: flex;
-    justify-content: space-evenly;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
+  width: 150px;
+  height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-  .tab button:first-child{ /*first tab*/
-    border-radius: 10px 0 0 0;
-    border-bottom: none;
-  }
+.tablinks:first-child {
+  /*first tab*/
+  border-radius: 10px 0 0 0;
+  border-bottom: none;
+}
 
-  .tab button:nth-child(2){ /*middle tab*/
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-  }
+.tablinks:nth-child(2) {
+  /*middle tab*/
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
 
-  .tab button:last-child{ /*third tab*/ 
-    border-radius:  0 10px 0 0;
-    border-bottom: none;
-  }
-  
-  /* Change background color of active tab */
-  .tab button.active {
-    background-color: var(--pale-yelloW);
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
-    display: none;
-    height: auto;
-    padding: 20px;
-    border: 2px solid var(--text-primary);
-    background-color: var(--pale-yelloW);
-    border-radius: 0 10px 10px 10px;
-  }
-  
-  /* Show active tab content */
-  .tabcontent.active {
-    display: block;
-  }
+.tablinks:last-child {
+  /*third tab*/
+  border-radius: 0 10px 0 0;
+  border-bottom: none;
+}
+
+/* Change background color of active tab */
+.tablinks.active {
+  background-color: var(--pale-yelloW);
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  height: auto;
+  padding: 20px;
+  border: 2px solid var(--text-primary);
+  background-color: var(--pale-yelloW);
+  border-radius: 0 10px 10px 10px;
+}
+
+/* Show active tab content */
+.tabcontent.active {
+  display: block;
+}
 
 
-  .tabcontainer{
-    display: flex;
-    flex-direction: row;
-    height: auto;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
+.tabcontainer {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
-  .information{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-  }
+.information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .smallbox{
-    width: 350px;
-    height: auto;
-    background-color: var(--bg-primary);
-    border-radius: 10px;
-    border: 2px solid var(--text-primary);
-    margin-bottom: 5vh;
-  }
+.smallbox {
+  width: 350px;
+  height: auto;
+  background-color: var(--bg-primary);
+  border-radius: 10px;
+  border: 2px solid var(--text-primary);
+  margin-bottom: 5vh;
+}
 
-  .smallbox .windowcontainer{
-    border-radius: 10px 10px 0 0;
-  }
+.smallbox .windowcontainer {
+  border-radius: 10px 10px 0 0;
+}
 
-  .projektdiscription{
-    width: 100%;
-    height: auto;
-  }
+.projektdiscription {
+  width: 100%;
+  height: auto;
+}
 
-  .projektdescription p{
-    width: 90%;
-    margin: auto;
-    padding: 1rem;
-  }
+.projektdescription p {
+  width: 90%;
+  margin: auto;
+  padding: 1rem;
+}
 
-  .imagegallery{
-    width: 100%;
-    height: auto;
-  
-  }
+.imagegallery {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+}
 
-  /* Slideshow container */
+/* Slideshow container */
 .slideshow-container {
   width: 90%;
   position: relative;
   margin: auto;
   max-height: 300px;
   display: flex;
-  justify-content: baseline;
+  justify-content: center;
   align-items: center;
+  border: solid 2px var(--text-primary);
+  
+
 }
 
-
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 10px 20px;
+  padding: 15px 15px;
   margin-top: -22px;
-  color: var(--text-primary);
+  color: var(--pink);
   font-weight: bold;
   font-size: 18px;
-  transition: 0.6s ease;
+  transition: 0.2s ease;
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* placer pilene ude siderne */
 .next {
   right: 0;
 }
 
+.prev{
+  left: 0;
+}
+
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover {
   background-color: var(--pink);
+  color: var(--text-primary);
   opacity: 0.5;
 }
 
@@ -325,7 +354,8 @@ flex-direction: row;
   transition: background-color 0.6s ease;
 }
 
-.imagegallery > .active, .dot:hover {
+.imagegallery>.active,
+.dot:hover {
   background-color: var(--pink);
 }
 
@@ -336,37 +366,97 @@ flex-direction: row;
 }
 
 @keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-
-
-
-
-
-
-  .pinkfolder{ /*temp shit so i can see it*/
-    width: 100px;
-    height: 100px;
-    background-color:#e58fab;
+  from {
+    opacity: .4
   }
 
-/* media query - til mobil */
-@media screen and (max-width: 700px) {
-    
+  to {
+    opacity: 1
+  }
 }
+
+
+.pinkfolder {
+  display: block;
+  width: 100%;
+}
+
+
+.nipponlinks{
+  background-color: var(--pale-pink);
+}
+
+.nipponlinks.active{
+  background-color: var(--pink);
+}
+
+.nipponlinks:first-child{
+  border-radius: 10px 0 0 0;
+  border-bottom: none
+}
+
+.nipponlinks:last-child{
+  border-radius: 0 10px 0 0;
+  border-bottom: none;
+  border-left: none;
+
+}
+
+
+/* Style the tab content */
+.nipponcontent {
+  display: none;
+  height: auto;
+  padding: 20px;
+  border: 2px solid var(--text-primary);
+  background-color: var(--pink);
+  border-radius: 0 10px 10px 10px;
+}
+
+/* Show active tab content */
+.nipponcontent.active {
+  display: block;
+}
+
+.nipponcontainer{
+  width: 100%;
+  height: auto;
+  position: relative;
+  }
+
+  .nipponimage{
+    width: 90%;
+    height: auto;
+    max-width: 500px;
+    max-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--text-primary);
+  }
+
+  .nipponcontainer .knap{
+    position: absolute;
+    right: 5%;
+    bottom: 7%;
+    text-decoration: none;
+    
+  }
+
+
+
+
+
+/* media query - til mobil */
+@media screen and (max-width: 700px) {}
 
 /* media query - til desktop */
 @media screen and (min-width: 700px) {
-    .knap:hover{
-        background-image: linear-gradient(to right, #e58fab, #8864e3);
-        color: var(--text-secondary);
-        box-shadow: -4px 4px 4px var(--dark-yellow);
-        }
+  .knap:hover {
+    background-image: linear-gradient(to right, #e58fab, #8864e3);
+    color: var(--text-secondary);
+    box-shadow: -4px 4px 4px var(--dark-yellow);
+  }
 
 
 }
-    
-  
-    
