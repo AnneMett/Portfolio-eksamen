@@ -8,6 +8,9 @@
     <script src="script.js" defer></script>
 
 <!-- Google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
 
 <!-- favicon -->
 
@@ -21,7 +24,7 @@
 </header>
 
 <main>
-
+<!-- den aller yderster browser vindue med lyselilla bg.  -->
     <div class="mainwindow">
         <div class="windowcontainer">
         <img class="logo" src="images/minus-solid.svg" alt="logo">
@@ -34,7 +37,7 @@
     
 
     
-    <!-- Landing sektion med billede og tekstboks-->
+    <!--  ******************* Landing sektion med billede og tekstboks *********************** -->
 
     <div class="landing"> <!-- yderste boks med position rel-->
 
@@ -63,7 +66,7 @@
 
 
 
-    <!--projekt sektion-->
+    <!-- ******************************* projekt sektion ********************************** -->
     <!--  referance: https://www.w3schools.com/howto/howto_js_tabs.asp -->
 
     <div class="projektcontainer"> <!-- yderste boks til layout-->
@@ -90,15 +93,15 @@
         <div class="projektfolder"> <!-- til str på projekt 'mappen' -->
         <div class="projekttabs"> <!-- til layout-->
         <div class="tab">
-            <button class="tablinks" data-tab="tab1"> Nippon Måltidskasser</button>
-            <button class="tablinks" data-tab="tab2"> Frontsession</button>
-            <button class="tablinks" data-tab="tab3"> Efterskolen Ådalen</button>
+            <button class="tablinks" data-tab="tab1"> <h3>Nippon Måltidskasser</h3></button>
+            <button class="tablinks" data-tab="tab2"> <h3>Frontsession</h3></button>
+            <button class="tablinks" data-tab="tab3"> <h3>Efterskolen Ådalen</h3></button>
           </div>
           
 
 
     <!-- tabs med selve projekter -->
-          <!-- Frontsession -->
+ <!-- ***************** Nippon ************************************** -->
           <div id="tab1" class="tabcontent">
         
             <div class="tabcontainer"> <!-- til flex-->
@@ -114,18 +117,16 @@
                         </div>
 
                         <div class="projektdescription">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Veritatis obcaecati iure, doloribus necessitatibus est sunt. 
-                                Repellat, molestiae iste, corporis sequi vero voluptatum fugiat 
-                                officia aspernatur labore magnam sint molestias facere! <br><br>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Veritatis obcaecati iure, doloribus necessitatibus est sunt. 
-                                Repellat, molestiae iste, corporis sequi vero voluptatum fugiat 
-                                officia aspernatur labore magnam sint molestias facere!<br><br>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Veritatis obcaecati iure, doloribus necessitatibus est sunt. 
-                                Repellat, molestiae iste, corporis sequi vero voluptatum fugiat 
-                                officia aspernatur labore magnam sint molestias facere!</p>
+                            <p><span>UI/UX Projektet</span> var vores første projekt på andet semester. 
+                                Det var et gruppe projekt som omhandlede at lave en hjemmeside til en fiktivt 
+                                måltidkasse virksomhed kaldet <span>Nippon Måltidskasser</span>. 
+                                Vi syntes det kunne være spændende at arbejde med en målgruppe der var
+                                lidt ældre og derfor udarbejdede vi et digitalt produkt,
+                                der især lagde vægt på en mere ligetil brugeroplevelse, 
+                                clean aesthetic og god kontrast. <br> <br>
+
+                                I dette projekt havde jeg særlig fokus på <span> User flow, User experience og Design.</span></pan> <br><br>
+                                                             </p>
                         </div>
                     </div>
 
@@ -140,105 +141,244 @@
                         </div>
 
                         <div class="imagegallery">
+
+                            <p>  Her nogle af de primære processer og elementer som jeg udarbejdede under projektet. 
+                                <br></p>
                             
                             <div class="slideshow-container">
 
-                                <div class="mySlides fade">
+                                <div class="mySlides-nippon fade">
                                   <img src="nippon/nipponmoodboard.jpg">
                                 </div>
 
-                                <div class="mySlides fade">
+                                <div class="mySlides-nippon fade">
                                     <img src="nippon/moodboard.jpg">
                                   </div>
                                                                 
-                                <div class="mySlides fade">
+                                <div class="mySlides-nippon fade">
                                   <img src="nippon/Artboard1.jpg">
                                 </div>
                                 
-                                <div class="mySlides fade">
+                                <div class="mySlides-nippon fade">
                                   <img src="nippon/Artboard3.jpg">
                                 </div>
 
-                                <div class="mySlides fade">
+                                <div class="mySlides-nippon fade">
                                     <img src="nippon/nipponlogoprocess.jpg">
                                   </div>
 
-                                  <div class="mySlides fade">
+                                  <div class="mySlides-nippon fade">
                                     <img src="nippon/404cups.jpg">
                                   </div>
 
-                                  <div class="mySlides fade">
+                                  <div class="mySlides-nippon fade">
                                     <img src="nippon/404bonsai.jpg">
                                   </div>
 
                                 
-                                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                                <a class="next" onclick="plusSlides(1)">❯</a>
+                                  <a class="prev prev-nippon" onclick="plusSlidesNippon(-1)">❮</a>
+                                  <a class="next next-nippon" onclick="plusSlidesNippon(1)">❯</a>
                                 
                                 </div>
                                 <br>
-                                
-                                <div style="text-align:center">
-                                  <span class="dot" onclick="currentSlide(1)"></span> 
-                                  <span class="dot" onclick="currentSlide(2)"></span> 
-                                  <span class="dot" onclick="currentSlide(3)"></span> 
-                                  <span class="dot" onclick="currentSlide(4)"></span> 
-                                  <span class="dot" onclick="currentSlide(5)"></span> 
-                                  <span class="dot" onclick="currentSlide(6)"></span> 
-                                  <span class="dot" onclick="currentSlide(7)"></span> 
-                                </div>
 
                         </div>
                     </div>
                 </div>
 
-                <div class="pinkfolder">
-                    <div class="projekttabs">
-                        <div class="tab">
-                            <button class="nipponlinks" data-nippon="Nippontab1">PC</button>
-                            <button class="nipponlinks" data-nippon="Nippontab2">Mobil</button>
+                <div class="pinkfolder"> <!-- til str-->
+                    <div class="pinkindhold"> <!-- til layout.-->
+
+                        <div class="pinkimage">
+                        <img src="#" alt="temp photo">
                         </div>
 
-
-                        <div id="Nippontab1" class="nipponcontent">
-                            <div class="nipponcontainer"> <!-- til str.-->
-                                <div class="nipponimage">  <!-- til flex-->
-                                    <img src="#" alt="temp photo">
-                                </div>
-                                <a href="#down" class="knap">Se Website</a>
-                                
-                            </div>
-                        </div>
-
-                        <div id="Nippontab2" class="nipponcontent">
-                            
-                        </div>
+                        <a href="https://nippon.amsl.dk" class="knap">Se website</a>
 
                     </div>
                     
                 </div> 
-
             </div>
-
-
-
-
-
           </div>
           
 
-          <!-- Nippon-->
+<!-- ****************** Frontsession *********************************** -->
           <div id="tab2" class="tabcontent">
-            <h3>Tab 2 Content</h3>
-            <p>This is the content for Tab 2.</p>
+            <div class="tabcontainer"> <!-- til flex-->
+                <div class="information"> <!-- til column-->
+                    <div class="smallbox">
+                        <div class="windowcontainer"> <!-- til lilla header-->
+                            <div></div> <!-- intentionalle empty div for layout purposes-->
+                             <div class="browsericons">
+                                <img src="images/minus-solid.svg" alt="minimize">
+                                <img src="images/window-restore-regular.svg" alt="maximize">
+                                <img src="images/square-xmark-solid.svg" alt="exit window">
+                            </div>
+                        </div>
+
+                        <div class="projektdescription">
+                            <p><span>Mobile first</span> var vores tredje projektforløb på første semester 
+                                og det var første gang vi skulle arbejde med at lave responsive webdesigns 
+                                til mobilstørrelser ved brug af media queries. 
+                                Vi valgte at tage udgangspunkt i at udarbejde en mere brugervenlig 
+                                digital prototype til Musikhøjskolen <span>"Frontsession"</span>.<br> <br>
+
+                                I dette projekt havde jeg særlig fokus på <span>User Research, User Interface og Design</span>, men også på selve gruppearbejdet, 
+                                da det var vores første større gruppeprojekt, og sammenspillet i gruppen var bare rigtigt godt.<br>
+                                                             </p>
+                        </div>
+                    </div>
+
+                    <div class="smallbox">
+                        <div class="windowcontainer"> <!-- til lilla header-->
+                            <div></div> <!-- intentionalle empty div for layout purposes-->
+                             <div class="browsericons">
+                                <img src="images/minus-solid.svg" alt="minimize">
+                                <img src="images/window-restore-regular.svg" alt="maximize">
+                                <img src="images/square-xmark-solid.svg" alt="exit window">
+                            </div>
+                        </div>
+
+                        <div class="imagegallery">
+
+                            <p>  Her nogle af de primære processer og elementer som jeg udarbejdede under projektet. 
+                                <br></p>
+                            
+                            <div class="slideshow-container">
+
+                                <div class="mySlides-frontsession fade">
+                                  <img src="frontsession/timeline.jpg">
+                                </div>
+
+                                <div class="mySlides-frontsession fade">
+                                    <img src="frontsession/sitemap.jpg">
+                                  </div>
+                                                                
+                                <div class="mySlides-frontsession fade">
+                                  <img src="frontsession/sketch.jpg">
+                                </div>
+                                
+                                <div class="mySlides-frontsession fade">
+                                  <img src="frontsession/wireframemobil.jpg">
+                                </div>
+
+                                <div class="mySlides-frontsession fade">
+                                    <img src="frontsession/wireframe.jpg">
+                                  </div>
+
+                                  <div class="mySlides-frontsession fade">
+                                    <img src="frontsession/mockup.jpg">
+                                  </div>
+                                
+                                  <a class="prev prev-frontsession" onclick="plusSlidesFrontsession(-1)">❮</a>
+                                  <a class="next next-frontsession" onclick="plusSlidesFrontsession(1)">❯</a>
+                                
+                                </div>
+                                <br>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinkfolder"> <!-- til str-->
+                    <div class="pinkindhold"> <!-- til layout.-->
+
+                        <div class="pinkimage">
+                        <img src="#" alt="temp photo">
+                        </div>
+
+                        <a href="https://nippon.amsl.dk" class="knap">Se website</a>
+
+                    </div>
+                    
+                </div> 
+            </div>
           </div>
           
-
-          <!-- Ådalen-->
+<!-- ********************************  Ådalen *********************** -->
           <div id="tab3" class="tabcontent">
-            <h3>Tab 3 Content</h3>
-            <p>This is the content for Tab 3.</p>
-          </div>
+            <div class="tabcontainer"> <!-- til flex-->
+                <div class="information"> <!-- til column-->
+                    <div class="smallbox">
+                        <div class="windowcontainer"> <!-- til lilla header-->
+                            <div></div> <!-- intentionalle empty div for layout purposes-->
+                             <div class="browsericons">
+                                <img src="images/minus-solid.svg" alt="minimize">
+                                <img src="images/window-restore-regular.svg" alt="maximize">
+                                <img src="images/square-xmark-solid.svg" alt="exit window">
+                            </div>
+                        </div>
+
+                        <div class="projektdescription">
+                            <p><span>2. semesters eksamensprojektet</span> var et gruppeprojekt, som tog udgangspunkt i <span>Efterskolen Ådalen</span>, 
+                                og er hidtil det længste projekt jeg har arbejdet med.  
+                                Vores fokus var på at opdatere Efterskolen Ådalens hjemmeside,
+                                med særlig fokus på at give dem en mere tydelig visuel identitet og kommunikation. Det er primært udarbejdet 
+                                efter samtaler med både undervisere og elever på skolen. <br> <br> 
+                                I dette projekt havde jeg særlig fokus på 
+                                <span>Projektstyring, User research, og Programmering</span> af hjemmesiden. 
+                        </div>
+                    </div>
+
+                    <div class="smallbox">
+                        <div class="windowcontainer"> <!-- til lilla header-->
+                            <div></div> <!-- intentionalle empty div for layout purposes-->
+                             <div class="browsericons">
+                                <img src="images/minus-solid.svg" alt="minimize">
+                                <img src="images/window-restore-regular.svg" alt="maximize">
+                                <img src="images/square-xmark-solid.svg" alt="exit window">
+                            </div>
+                        </div>
+
+                        <div class="imagegallery">
+
+                            <p>  Her nogle af de primære processer og elementer som jeg udarbejdede under projektet. 
+                                <br></p>
+                            
+                            <div class="slideshow-container">
+
+                                <div class="mySlides-aadalen fade">
+                                  <img src="aadalen/persona.jpg">
+                                </div>
+
+                                <div class="mySlides-aadalen fade">
+                                    <img src="aadalen/empathy.jpg">
+                                  </div>
+                                                                
+                                <div class="mySlides-aadalen fade">
+                                  <img src="aadalen/moodboard.jpg">
+                                </div>
+                                
+                                <div class="mySlides-aadalen fade">
+                                  <img src="aadalen/wireframe.jpg">
+                                </div>
+
+                                <div class="mySlides-aadalen fade">
+                                    <img src="aadalen/mockup.jpg">
+                                  </div>
+
+                                                            
+                                  <a class="prev prev-aadalen" onclick="plusSlidesAadalen(-1)">❮</a>
+                                  <a class="next next-aadalen" onclick="plusSlidesAadalen(1)">❯</a>
+                                
+                                </div>
+                                <br>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pinkfolder"> <!-- til str-->
+                    <div class="pinkindhold"> <!-- til layout.-->
+
+                        <div class="pinkimage">
+                        <img src="#" alt="temp photo">
+                        </div>
+
+                        <a href="https://nippon.amsl.dk" class="knap">Se website</a>
+
+                    </div>
+                    
+                </div> 
+            </div>
         </div>
         </div>
 </div>

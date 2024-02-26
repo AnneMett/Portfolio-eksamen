@@ -35,67 +35,105 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-/* det her er til billedegallery på nippon projekt 
-ref: w3schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow */
-let slideIndex = 1; // Initialiserer variablen 'slideIndex' og sætter den til 1, hvilket repræsenterer det første slide.
-showSlides(slideIndex); // Kalder funktionen 'showSlides' for at vise det første slide.
+/* Nippon Galleri */
 
-// Funktion til at ændre slides med en bestemt mængde
-function plusSlides(n) {
-  showSlides(slideIndex += n); // Kalder funktionen 'showSlides' med det nye slideindeks efter tilføjelse af 'n'.
+// Initialiserer variablen til det første slide
+let slideIndexNippon = 1;
+
+// Funktion til at skifte slides med en bestemt mængde
+function plusSlidesNippon(n) {
+  showSlidesNippon(slideIndexNippon += n);
 }
 
-// Funktion til at ændre slide til en bestemt position
-function currentSlide(n) {
-  showSlides(slideIndex = n); // Kalder funktionen 'showSlides' med det valgte slideindeks 'n'.
+// Funktion til at skifte til et bestemt slide
+function currentSlideNippon(n) {
+  showSlidesNippon(slideIndexNippon = n);
 }
 
 // Funktion til at vise slides
-function showSlides(n) {
+function showSlidesNippon(n) {
   let i;
-  let slides = document.getElementsByClassName("mySlides"); // Henter alle elementer med klassenavnet 'mySlides' (dine slides).
-  let dots = document.getElementsByClassName("dot"); // Henter alle elementer med klassenavnet 'dot' (dine punkter).
-  if (n > slides.length) {slideIndex = 1}    // Hvis 'n' er større end antallet af slides, skal 'slideIndex' sættes til 1 for at gå til det første slide.
-  if (n < 1) {slideIndex = slides.length} // Hvis 'n' er mindre end 1, skal 'slideIndex' sættes til det sidste slide.
+  // Henter alle elementer med klassenavnet 'mySlides-nippon' (dine slides)
+  let slides = document.getElementsByClassName("mySlides-nippon");
+
+  // Tjekker om det valgte slideindeks er uden for rækkevidden af slides
+  if (n > slides.length) { slideIndexNippon = 1 }
+  if (n < 1) { slideIndexNippon = slides.length }
+
+  // Skjuler alle slides
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  // Skjuler alle slides.
+    slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", ""); // Fjerner klassen 'active' fra alle punkter.
-  }
-  slides[slideIndex-1].style.display = "block";  // Viser det aktuelle slide ved at ændre dets stilattribut til 'display: block'.
-  dots[slideIndex-1].className += " active"; // Tilføjer klassen 'active' til det aktuelle punkt for at markere det som aktivt.
+
+  // Viser det aktuelle slide
+  slides[slideIndexNippon - 1].style.display = "block";
 }
 
-// Automatisk ændring af slides hvert 3. sekund (3000 millisekunder)
+// Viser det første slide ved indlæsning af siden
+showSlidesNippon(slideIndexNippon);
+
+// Automatisk skift billede hvert 6. sekund
 setInterval(function() {
-  plusSlides(1); // Ændrer slide med 1
-}, 6000); // Intervallet er 6000 millisekunder (6 sekunder), kan ændres efter behov.
+  plusSlidesNippon(1); // Skifter til næste slide
+}, 6000);
 
 
-// her er til nippon tabs //
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Set the first tab as active on page load
-  document.querySelector(".nipponlinks").classList.add("active");
-  document.getElementById("Nippontab1").classList.add("active");
+//rinse og repeat til billedgallarierne på frontsession og Ådalen
+/* Frontsession Gallery  */
+let slideIndexFrontsession = 1;
 
-  // Add event listener to tab buttons
-  var tabButtons = document.querySelectorAll(".nipponlinks");
-  tabButtons.forEach(function(button) {
-    button.addEventListener("click", function() {
-      // Remove "active" class from all tab buttons and tab contents
-      tabButtons.forEach(function(btn) {
-        btn.classList.remove("active");
-      });
-      document.querySelectorAll(".nipponcontent").forEach(function(tabContent) {
-        tabContent.classList.remove("active");
-      });
+function plusSlidesFrontsession(n) {
+  showSlidesFrontsession(slideIndexFrontsession += n);
+}
 
-      // Add "active" class to the clicked tab button and corresponding tab content
-      var tabId = this.getAttribute("data-nippon");
-      this.classList.add("active");
-      document.getElementById(tabId).classList.add("active");
-    });
-  });
-});
+function currentSlideFrontsession(n) {
+  showSlidesFrontsession(slideIndexFrontsession = n);
+}
+
+function showSlidesFrontsession(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides-frontsession");
+  if (n > slides.length) { slideIndexFrontsession = 1 }
+  if (n < 1) { slideIndexFrontsession = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndexFrontsession - 1].style.display = "block";
+}
+
+showSlidesFrontsession(slideIndexFrontsession);
+
+setInterval(function() {
+  plusSlidesFrontsession(1); // Skifter til næste slide
+}, 6000);
+
+/* Aadalen Gallery */
+let slideIndexAadalen = 1;
+
+function plusSlidesAadalen(n) {
+  showSlidesAadalen(slideIndexAadalen += n);
+}
+
+function currentSlideAadalen(n) {
+  showSlidesAadalen(slideIndexAadalen = n);
+}
+
+function showSlidesAadalen(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides-aadalen");
+  if (n > slides.length) { slideIndexAadalen = 1 }
+  if (n < 1) { slideIndexAadalen = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndexAadalen - 1].style.display = "block";
+}
+
+showSlidesAadalen(slideIndexAadalen);
+
+setInterval(function() {
+  plusSlidesAadalen(1); // Skifter til næste slide
+}, 6000);
+
+

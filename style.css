@@ -1,8 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  /*indsæt google fonts her */
-}
+   }
+
+
 
 /* Styletile men css */
 :Root {
@@ -38,6 +39,37 @@ html {
 body {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
+  font-family: "Barlow", sans-serif;
+}
+
+p span{
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* responsive text ref: https://matthewjamestaylor.com/responsive-font-size 
+tak til Julie! <3 */
+
+p{
+  font-size: calc(14px + 0.390625vw);
+}
+
+a{
+  font-size: calc(14px + 0.390625vw);
+  font-weight: 700;
+}
+
+h1{
+  font-size: calc(26px + 0.390625vw);
+}
+
+h2{
+  font-size: calc(20px + 0.390625vw);
+}
+
+h3{
+  font-size: calc(14px + 0.390625vw);
 }
 
 /* main window */
@@ -201,7 +233,7 @@ body {
 
 /* Style the tab buttons */
 .tab button {
-  width: 150px;
+  width: 200px;
   height: 50px;
   align-items: center;
   display: flex;
@@ -234,11 +266,16 @@ body {
   background-color: var(--pale-yelloW);
 }
 
+.tablinks:hover{
+  background: linear-gradient(to right, #fcf1cf, #f5d6e0);
+  transition: 0.2s ease;
+  text-decoration: underline dotted var(--pink) 4px;
+}
+
 /* Style the tab content */
 .tabcontent {
   display: none;
   height: auto;
-  padding: 20px;
   border: 2px solid var(--text-primary);
   background-color: var(--pale-yelloW);
   border-radius: 0 10px 10px 10px;
@@ -254,8 +291,8 @@ body {
   display: flex;
   flex-direction: row;
   height: auto;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: stretch;
 }
 
 .information {
@@ -263,10 +300,12 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  max-width: 400px;
+  margin: 1rem;
 }
 
 .smallbox {
-  width: 350px;
+  width: 100%;
   height: auto;
   background-color: var(--bg-primary);
   border-radius: 10px;
@@ -275,7 +314,7 @@ body {
 }
 
 .smallbox .windowcontainer {
-  border-radius: 10px 10px 0 0;
+  border-radius: 8px 8px 0 0;
 }
 
 .projektdiscription {
@@ -293,6 +332,10 @@ body {
   width: 100%;
   height: auto;
   padding: 1rem 0;
+}
+
+.imagegallery p{
+  margin: 0rem 1.2rem 0.5rem 1.2rem;
 }
 
 /* Slideshow container */
@@ -342,22 +385,6 @@ body {
   opacity: 0.5;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: var(--pale-pink);
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.imagegallery>.active,
-.dot:hover {
-  background-color: var(--pink);
-}
 
 /* Fading animation */
 .fade {
@@ -379,69 +406,35 @@ body {
 .pinkfolder {
   display: block;
   width: 100%;
-}
-
-
-.nipponlinks{
-  background-color: var(--pale-pink);
-}
-
-.nipponlinks.active{
-  background-color: var(--pink);
-}
-
-.nipponlinks:first-child{
-  border-radius: 10px 0 0 0;
-  border-bottom: none
-}
-
-.nipponlinks:last-child{
-  border-radius: 0 10px 0 0;
-  border-bottom: none;
-  border-left: none;
-
-}
-
-
-/* Style the tab content */
-.nipponcontent {
-  display: none;
   height: auto;
-  padding: 20px;
-  border: 2px solid var(--text-primary);
+  margin:1rem;
+}
+
+.pinkindhold{
   background-color: var(--pink);
-  border-radius: 0 10px 10px 10px;
-}
-
-/* Show active tab content */
-.nipponcontent.active {
-  display: block;
-}
-
-.nipponcontainer{
+  display: flex;
   width: 100%;
   height: auto;
-  position: relative;
-  }
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 2px solid var(--text-primary);
+}
 
-  .nipponimage{
-    width: 90%;
-    height: auto;
-    max-width: 500px;
-    max-height: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid var(--text-primary);
-  }
+.pinkimage{
+  background-color: var(--pale-pink);
+  max-width: 400px;
+  max-height: 500px;
+  margin: 2rem 2rem 1rem 2rem;
+  border: 2px solid var(--text-primary);
+}
 
-  .nipponcontainer .knap{
-    position: absolute;
-    right: 5%;
-    bottom: 7%;
-    text-decoration: none;
-    
-  }
+.pinkfolder .knap{
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
 
 
 
