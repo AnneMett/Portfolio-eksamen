@@ -7,22 +7,14 @@
 
 /* Styletile men css */
 :Root {
-  /*font-size: 2vw;
-    --font-size-primary: 2vw;
-    --font-size-secondary:  1.3vw; */
-  --text-primary: #1d0a24;
-  /*dark text */
-  --text-secondary: #fefbfb;
-  /*light text*/
-  --bg-primary: #fefbfb;
-  /*white-ish*/
-  --bg-secondary: #fef8e7;
-  /* pale yellow bg til aller bag main vindue*/
+    --text-primary: #1d0a24; /*dark text */
+  --text-secondary: #fefbfb;/*light text*/
+  --bg-primary: #fefbfb;/*white-ish*/
+  --bg-secondary: #fef8e7;/* pale yellow bg til aller bag main vindue*/
   --pink: #e58fab;
   --pale-pink: #f5d6e0;
   --purple: #8864e3;
-  --pale-purple: #bda9ef;
-  /* bg farve til main window */
+  --pale-purple: #bda9ef;/* bg farve til main window */
   --purple-bg: hsla(257, 69%, 80%, 0.35);
   --yellow: #f9e095;
   --pale-yelloW: #fcf1cf;
@@ -300,8 +292,12 @@ h3{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-width: 400px;
+  max-width: 50%; /* Adjusted to make the container responsive */
   margin: 1rem;
+}
+
+.smallbox:first-child {
+  margin-bottom: 1rem;
 }
 
 .smallbox {
@@ -310,20 +306,14 @@ h3{
   background-color: var(--bg-primary);
   border-radius: 10px;
   border: 2px solid var(--text-primary);
-  margin-bottom: 5vh;
 }
 
 .smallbox .windowcontainer {
   border-radius: 8px 8px 0 0;
 }
 
-.projektdiscription {
-  width: 100%;
-  height: auto;
-}
-
 .projektdescription p {
-  width: 90%;
+  width: 90%; /* Adjusted to make text responsive */
   margin: auto;
   padding: 1rem;
 }
@@ -334,13 +324,12 @@ h3{
   padding: 1rem 0;
 }
 
-.imagegallery p{
+.imagegallery p {
   margin: 0rem 1.2rem 0.5rem 1.2rem;
 }
 
-/* Slideshow container */
 .slideshow-container {
-  width: 90%;
+  width: 90%; /* Adjusted to make slideshow container responsive */
   position: relative;
   margin: auto;
   max-height: 300px;
@@ -348,8 +337,6 @@ h3{
   justify-content: center;
   align-items: center;
   border: solid 2px var(--text-primary);
-  
-
 }
 
 /* Next & previous buttons */
@@ -407,10 +394,10 @@ h3{
   display: block;
   width: 100%;
   height: auto;
-  margin:1rem;
+  margin: 1rem;
 }
 
-.pinkindhold{
+.pinkindhold {
   background-color: var(--pink);
   display: flex;
   width: 100%;
@@ -422,22 +409,19 @@ h3{
   border: 2px solid var(--text-primary);
 }
 
-.pinkimage{
-  background-color: var(--pale-pink);
-  max-width: 400px;
-  max-height: 500px;
-  margin: 2rem 2rem 1rem 2rem;
-  border: 2px solid var(--text-primary);
-}
-
-.pinkfolder .knap{
+.pinkfolder .knap {
   text-decoration: none;
   margin-bottom: 1rem;
 }
 
+.pinkfolder video {
+  max-width: 100%; /* Set maximum width to 100% */
+  height: auto; /* Let the height scale proportionally */
+}
 
-
-
+.pinkimage{
+  padding: 1rem;
+}
 
 
 /* media query - til mobil */
