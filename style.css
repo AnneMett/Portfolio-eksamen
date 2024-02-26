@@ -38,6 +38,7 @@ p span{
   font-family: "Barlow", sans-serif;
   font-weight: 700;
   font-style: normal;
+  color: var(--pink);
 }
 
 /* responsive text ref: https://matthewjamestaylor.com/responsive-font-size 
@@ -114,7 +115,7 @@ h3{
   margin-top: 3vh;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 2.5rem;
   /* midlertidlig whitespace */
 }
 
@@ -133,10 +134,10 @@ h3{
 
 .posrelcontainer {
   position: absolute;
-  max-width: 30%;
+  max-width: 40%;
   height: auto;
-  left: 15vw;
-  bottom: -5vh;
+  left: 12vw;
+  bottom: -3vh;
   border-radius: 10px;
   /* inderste bokse har har border radius 10*/
   background-color: var(--bg-primary);
@@ -292,7 +293,7 @@ h3{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-width: 50%; /* Adjusted to make the container responsive */
+  max-width: 45%; /* Adjusted to make the container responsive */
   margin: 1rem;
 }
 
@@ -379,6 +380,11 @@ h3{
   animation-duration: 1.5s;
 }
 
+.fade img{
+  width: 100%;
+  height: auto;
+}
+
 @keyframes fade {
   from {
     opacity: .4
@@ -423,9 +429,71 @@ h3{
   padding: 1rem;
 }
 
+/* about sektion */
+
+.givespace{
+  margin-top: 1rem;
+}
+
+.yellowbox{
+  margin: 1rem;
+  background-color: var(--pale-yelloW)
+}
+
+.accordiancontainer{
+  width: 90%;
+  height: auto;
+}
+
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
 
 /* media query - til mobil */
-@media screen and (max-width: 700px) {}
+@media screen and (max-width: 700px) {
+
+  .browsericons{
+    opacity: 0;
+  }
+
+
+}
 
 /* media query - til desktop */
 @media screen and (min-width: 700px) {
