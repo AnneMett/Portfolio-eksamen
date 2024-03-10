@@ -3,6 +3,7 @@
   padding: 0;
    }
 
+   
 
 
 /* Styletile men css */
@@ -10,11 +11,12 @@
     --text-primary: #1d0a24; /*dark text */
   --text-secondary: #fefbfb;/*light text*/
   --bg-primary: #fefbfb;/*white-ish*/
-  --bg-secondary: #fef8e7;/* pale yellow bg til aller bag main vindue*/
+  --bg-secondary: #292825;/* bg til aller bag main vindue*/
   --pink: #e58fab;
   --pale-pink: #f5d6e0;
   --purple: #8864e3;
-  --pale-purple: #bda9ef;/* bg farve til main window */
+  --pale-purple: #bda9ef;
+  --main-window: #EEE9FB; /* bg farve til main window */
   --purple-bg: hsla(257, 69%, 80%, 0.35);
   --yellow: #f9e095;
   --pale-yelloW: #fcf1cf;
@@ -69,17 +71,42 @@ h3{
   font-family: "Barlow Condensed", sans-serif;
 }
 
+/* scrollbar */
+
+::-webkit-scrollbar { 
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pale-pink); 
+  border: 2px solid var(--text-primary);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--pink); 
+  border: 2px solid var(--text-primary);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--purple); 
+}
+
+
+
+
 /* main window */
 
 .mainwindow {
-  background-color: var(--purple-bg);
+  background-color: var(--main-window);
   width: 80%;
   height: auto;
   margin: auto;
   margin-top: 10px;
+  margin-bottom: 1rem;
   border-radius: 20px;
   border: var(--text-primary) 2px solid;
-  padding-bottom: 100px;
+  padding-bottom: 1rem;
   box-shadow: -4px 4px 4px var(--dropshadow);
 }
 
@@ -441,7 +468,7 @@ h3{
 
 .yellowbox{
   margin: 1rem;
-  background-color: var(--pale-yelloW)
+  background-color: var(--pale-yelloW);
 }
 
 .accordianelement{
@@ -457,7 +484,32 @@ h3{
   margin: 1rem;
 }
 
+/* til footer */
 
+.givflex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.billede{
+padding: 1rem;
+margin-right:5rem; 
+}
+
+.somedia{
+  display: flex;
+  justify-content: end;
+  margin-right: 3rem;
+  margin-bottom: 1rem;
+}
+
+.altfont{
+  font-weight: bold;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: calc(16px + 0.390625vw);
+}
 
 
 
