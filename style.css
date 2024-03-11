@@ -85,7 +85,7 @@ h3{
 ::-webkit-scrollbar-thumb {
   background: var(--pink); 
   border: 2px solid var(--text-primary);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -99,12 +99,12 @@ h3{
 
 .mainwindow {
   background-color: var(--main-window);
-  width: 80%;
+  width: 85%;
   height: auto;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 1rem;
-  border-radius: 20px;
+  border-radius: 10px;
   border: var(--text-primary) 2px solid;
   padding-bottom: 1rem;
   box-shadow: -4px 4px 4px var(--dropshadow);
@@ -112,19 +112,13 @@ h3{
 
 .windowcontainer {
   background-color: var(--purple);
-  border-radius: 17px 17px 0 0;
+  border-radius: 8px 8px 0 0;
   border-bottom: var(--text-primary) 2px solid;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 20px;
-  /* Adjust padding as needed */
 }
 
-.logo {
-  width: 20px;
-  height: 20px;
-}
 
 .browsericons img {
   width: 20px;
@@ -140,7 +134,6 @@ h3{
  and use flex column in mobile - so the text box appear beneath the image. */
 
 .landing {
-  position: relative;
   display: flex;
   width: 100%;
   margin-top: 3vh;
@@ -151,24 +144,20 @@ h3{
 }
 
 .landingpic {
-  width: 80%;
+  width: 85%;
   height: 500px;
   /* kan fjernes når billede indsættes*/
   display: flex;
   justify-content: center;
   background-color: var(--pale-pink);
-  border-radius: 20px;
+  border-radius: 10px;
   /* yderste bokse har border radius 20 */
   border: var(--text-primary) 2px solid;
   box-shadow: -4px 4px 4px var(--dropshadow);
 }
 
 .posrelcontainer {
-  position: absolute;
-  max-width: 40%;
   height: auto;
-  left: 12vw;
-  bottom: -3vh;
   border-radius: 10px;
   /* inderste bokse har har border radius 10*/
   background-color: var(--bg-primary);
@@ -196,13 +185,10 @@ h3{
   margin-bottom: 15%;
 }
 
-.indhold a {
-  position: absolute;
-  right: 5%;
-  bottom: 7%;
+.indhold a{
   text-decoration: none;
-  z-index: 444;
 }
+
 
 .knap {
   background-color: var(--button);
@@ -211,8 +197,7 @@ h3{
   /* black box shadow*/
   border-radius: 10px;
   border: var(--text-primary) 2px solid;
-  padding: 2% 5%;
-}
+  }
 
 
 /*------------------ projekt-faner */
@@ -224,11 +209,11 @@ h3{
 }
 
 .projektsektion {
-  width: 80%;
+  width: 85%;
   margin: auto;
   border: var(--text-primary) 2px solid;
   box-shadow: -4px 4px 4px var(--dropshadow);
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: var(--bg-primary);
 
 }
@@ -288,12 +273,6 @@ h3{
 /* Change background color of active tab */
 .tablinks.active {
   background-color: var(--pale-yelloW);
-}
-
-.tablinks:hover{
-  background: linear-gradient(to right, #fcf1cf, #f5d6e0);
-  transition: 0.2s ease;
-  text-decoration: underline dotted var(--pink) 4px;
 }
 
 /* Style the tab content */
@@ -396,14 +375,6 @@ h3{
   left: 0;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: var(--pink);
-  color: var(--text-primary);
-  opacity: 0.5;
-}
-
 
 /* Fading animation */
 .fade {
@@ -431,7 +402,7 @@ h3{
   display: block;
   width: 100%;
   height: auto;
-  margin: 1rem;
+
 }
 
 .pinkindhold {
@@ -467,18 +438,19 @@ h3{
 }
 
 .yellowbox{
+  width: 90%;
   margin: 1rem;
   background-color: var(--pale-yelloW);
 }
 
-.accordianelement{
+.informationelement{
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
 }
 
-.accordiancontainer{
+.informationcontainer{
   width: 90%;
   height: auto;
   margin: 1rem;
@@ -490,19 +462,7 @@ h3{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-}
-
-.billede{
-padding: 1rem;
-margin-right:5rem; 
-}
-
-.somedia{
-  display: flex;
-  justify-content: end;
-  margin-right: 3rem;
-  margin-bottom: 1rem;
+  justify-content: space-evenly;
 }
 
 .altfont{
@@ -511,7 +471,12 @@ margin-right:5rem;
   font-size: calc(16px + 0.390625vw);
 }
 
-
+.kontaktinfo a{
+  text-decoration: none;
+  color: var(--text-primary);
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+}
 
 
 
@@ -519,20 +484,160 @@ margin-right:5rem;
 /* media query - til mobil */
 @media screen and (max-width: 700px) {
 
+  .mainwindow {
+    width: 92%;
+  }
+
   .browsericons{
     opacity: 0;
   }
+
+  .posrelcontainer{
+    max-width: 90%;
+    height: auto;
+    margin-top: 1rem;
+}
+
+.indhold{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.knap{
+  padding: 3% 5%;
+}
+.landing {
+   margin-bottom: 1rem;
+ }
+
+.landingpic{
+  width: 90%;
+  height: 300px;
+}
+
+.indhold p {
+  margin-bottom: 5%;
+}
+
+.projektsektion {
+  width: 90%;
+}
+
+.projekttabs{
+  margin: 0.5rem;
+}
+
+.tab button {
+  width: 80px;
+  height: 40px;
+}
+
+h3{
+  font-size: calc(14px + 0.390625vw);
+}
+
+.tabcontainer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.information {
+  max-width: 90%; 
+  margin: 1rem;
+}
+
+.pinkindhold {
+   width: 90%;
+    margin: 0;
+ }
+
+ .pinkfolder{
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+ }
+
+ .givluft{
+  margin-bottom: 1rem;
+ }
+
+ .billede img{
+  max-width: 70px;
+  height: auto;
+}
+
+
 
 
 }
 
 /* media query - til desktop */
 @media screen and (min-width: 700px) {
+
+.windowcontainer {
+  padding: 5px 20px;
+  }
+  
+
+.knap{
+  padding: 2% 5%;
+}
+  
   .knap:hover {
     background-image: linear-gradient(to right, #e58fab, #8864e3);
     color: var(--text-secondary);
     box-shadow: -4px 4px 4px var(--dark-yellow);
   }
+
+  .kontaktinfo p :hover{
+    color: var(--pink);
+  }
+
+  .landing {
+    position: relative;
+  }
+
+  .posrelcontainer{
+    position: absolute;
+    max-width: 40%;
+    height: auto;
+    left: 12vw;
+    bottom: -3vh;
+  }
+
+  .indhold a {
+    position: absolute;
+    right: 5%;
+    bottom: 7%;
+    z-index: 444;
+  }
+
+  .tablinks:hover{
+    background: linear-gradient(to right, #fcf1cf, #f5d6e0);
+    transition: 0.2s ease;
+    text-decoration: underline dotted var(--pink) 4px;
+  }
+
+/* tilføj en mørkeere baggrudn ved hover */
+.prev:hover,
+.next:hover {
+  background-color: var(--pink);
+  color: var(--text-primary);
+  opacity: 0.5;
+}
+
+
+.pinkfolder {
+  margin: 1rem;
+}
+
+
+.billede img{
+  width: 170px;
+  height: auto;
+}
 
 
 }
