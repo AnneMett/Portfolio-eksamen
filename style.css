@@ -98,7 +98,7 @@ h3{
 /* main window */
 
 .mainwindow {
-  background-color: var(--main-window);
+  background: linear-gradient(var(--main-window), var(--pale-purple) 100%);
   width: 85%;
   height: auto;
   margin: auto;
@@ -107,11 +107,11 @@ h3{
   border-radius: 10px;
   border: var(--text-primary) 2px solid;
   padding-bottom: 1rem;
-  box-shadow: -4px 4px 4px var(--dropshadow);
+  box-shadow: -2px 2px 4px var(--dropshadow);
 }
 
 .windowcontainer {
-  background-color: var(--purple);
+  background: linear-gradient(to right, var(--pale-purple) 10%, var(--purple) 100%);
   border-radius: 8px 8px 0 0;
   border-bottom: var(--text-primary) 2px solid;
   display: flex;
@@ -145,24 +145,25 @@ h3{
 
 .landingpic {
   width: 85%;
-  height: 500px;
+  height: 400px;
   /* kan fjernes når billede indsættes*/
   display: flex;
   justify-content: center;
-  background-color: var(--pale-pink);
+  background-image: url(images/laptopheader.svg);
   border-radius: 10px;
   /* yderste bokse har border radius 20 */
   border: var(--text-primary) 2px solid;
-  box-shadow: -4px 4px 4px var(--dropshadow);
+  box-shadow: -2px 2px 4px var(--dropshadow);
 }
+
 
 .posrelcontainer {
   height: auto;
   border-radius: 10px;
   /* inderste bokse har har border radius 10*/
-  background-color: var(--bg-primary);
+  background: linear-gradient(var(--bg-primary)60%, var(--pale-pink)100%);
   border: var(--text-primary) 2px solid;
-  box-shadow: -4px 4px 4px var(--dropshadow);
+  box-shadow: -2px 2px 4px var(--dropshadow);
 }
 
 .windowsborder {
@@ -193,12 +194,11 @@ h3{
 .knap {
   background-color: var(--button);
   color: var(--text-primary);
-  box-shadow: -4px 4px 4px var(--dropshadow);
+  box-shadow: -2px 2px 4px var(--dropshadow);
   /* black box shadow*/
   border-radius: 10px;
   border: var(--text-primary) 2px solid;
   }
-
 
 /*------------------ projekt-faner */
 
@@ -212,9 +212,9 @@ h3{
   width: 85%;
   margin: auto;
   border: var(--text-primary) 2px solid;
-  box-shadow: -4px 4px 4px var(--dropshadow);
+  box-shadow: -2px 2px 4px var(--dropshadow);
   border-radius: 10px;
-  background-color: var(--bg-primary);
+  background: linear-gradient(var(--bg-primary), var(--pale-pink));
 
 }
 
@@ -431,6 +431,14 @@ h3{
   padding: 1rem;
 }
 
+.pinkimage img{
+  width: 100%;
+  height: auto;
+  border-radius: 100% 100% 0 0;
+  border: 2px solid var(--text-primary)
+ 
+ }
+
 /* about sektion */
 
 .givespace{
@@ -438,9 +446,9 @@ h3{
 }
 
 .yellowbox{
-  width: 90%;
+  width: 100%;
   margin: 1rem;
-  background-color: var(--pale-yelloW);
+  background-color:var(--bg-primary);
 }
 
 .informationelement{
@@ -479,10 +487,8 @@ h3{
 }
 
 
-
-
-/* media query - til mobil */
-@media screen and (max-width: 700px) {
+/* media query - til tablet / main responsive */
+@media screen and (max-width: 800px) {
 
   .mainwindow {
     width: 92%;
@@ -491,6 +497,8 @@ h3{
   .browsericons{
     opacity: 0;
   }
+
+  
 
   .posrelcontainer{
     max-width: 90%;
@@ -513,7 +521,7 @@ h3{
 
 .landingpic{
   width: 90%;
-  height: 300px;
+  height: 200px;
 }
 
 .indhold p {
@@ -548,6 +556,10 @@ h3{
   margin: 1rem;
 }
 
+.yellowbox{
+  width: 90%;
+}
+
 .pinkindhold {
    width: 90%;
     margin: 0;
@@ -559,22 +571,39 @@ h3{
   margin-top: 0.5rem;
  }
 
+ 
  .givluft{
   margin-bottom: 1rem;
  }
 
  .billede img{
-  max-width: 70px;
+  max-width: 150px;
   height: auto;
+  margin-right: 1rem;
+}
+
+.kontaktinfo h2{
+  font-size: calc(16px + 0.390625vw);
+}
+
+
+.kontaktinfo .altfont{
+  font-size: calc(14px + 0.390625vw);  
+}
 }
 
 
 
-
+/*medie query - til mobil */
+@media screen and (max-width: 450px){
+  .billede img{
+    max-width: 90px;
 }
+}
+
 
 /* media query - til desktop */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
 
 .windowcontainer {
   padding: 5px 20px;
@@ -588,11 +617,11 @@ h3{
   .knap:hover {
     background-image: linear-gradient(to right, #e58fab, #8864e3);
     color: var(--text-secondary);
-    box-shadow: -4px 4px 4px var(--dark-yellow);
+    box-shadow: -2px 2px 4px var(--dark-yellow);
   }
 
   .kontaktinfo p :hover{
-    color: var(--pink);
+    color: var(--purple);
   }
 
   .landing {
@@ -603,7 +632,7 @@ h3{
     position: absolute;
     max-width: 40%;
     height: auto;
-    left: 12vw;
+    right: 12vw;
     bottom: -3vh;
   }
 
