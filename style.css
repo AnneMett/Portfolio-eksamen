@@ -169,7 +169,7 @@ h3{
 .windowsborder {
   height: 30px;
   width: 100%;
-  background-color: var(--purple);
+  background: linear-gradient(to right, var(--pale-purple) 10%, var(--purple) 100%);
   border-radius: 7px 7px 0 0;
   border-bottom: var(--text-primary) 2px solid;
   margin-bottom: 2%;
