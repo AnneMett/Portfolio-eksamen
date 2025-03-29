@@ -1,22 +1,27 @@
 * {
   margin: 0;
   padding: 0;
-   }
+}
 
-   
+
 
 
 /* Styletile men css */
 :Root {
-    --text-primary: #1d0a24; /*dark text */
-  --text-secondary: #fefbfb;/*light text*/
-  --bg-primary: #fefbfb;/*white-ish*/
-  --bg-secondary: #292825;/* bg til aller bag main vindue*/
+  --text-primary: #1d0a24;
+  /*dark text */
+  --text-secondary: #fefbfb;
+  /*light text*/
+  --bg-primary: #fefbfb;
+  /*white-ish*/
+  --bg-secondary: #292825;
+  /* bg til aller bag main vindue*/
   --pink: #e58fab;
   --pale-pink: #f5d6e0;
   --purple: #8864e3;
   --pale-purple: #bda9ef;
-  --main-window: #EEE9FB; /* bg farve til main window */
+  --main-window: #EEE9FB;
+  /* bg farve til main window */
   --purple-bg: hsla(257, 69%, 80%, 0.35);
   --yellow: #f9e095;
   --pale-yelloW: #fcf1cf;
@@ -35,7 +40,7 @@ body {
   color: var(--text-primary);
 }
 
-p span{
+p span {
   font-weight: 700;
   font-style: normal;
   color: var(--pink);
@@ -45,51 +50,51 @@ p span{
 /* responsive text ref: https://matthewjamestaylor.com/responsive-font-size 
 tak til Julie! <3 */
 
-p{
+p {
   font-size: calc(12px + 0.390625vw);
   font-family: "Montserrat", sans-serif;
 }
 
-a{
+a {
   font-size: calc(12px + 0.390625vw);
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
 
-h1{
+h1 {
   font-size: calc(28px + 0.390625vw);
   font-family: "Barlow Condensed", sans-serif;
 }
 
-h2{
+h2 {
   font-size: calc(22px + 0.390625vw);
   font-family: "Barlow Condensed", sans-serif;
 }
 
-h3{
+h3 {
   font-size: calc(18px + 0.390625vw);
   font-family: "Barlow Condensed", sans-serif;
 }
 
 /* scrollbar */
 
-::-webkit-scrollbar { 
+::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--pale-pink); 
+  background: var(--pale-pink);
   border: 2px solid var(--text-primary);
 }
- 
+
 ::-webkit-scrollbar-thumb {
-  background: var(--pink); 
+  background: var(--pink);
   border: 2px solid var(--text-primary);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--purple); 
+  background: var(--purple);
 }
 
 
@@ -186,7 +191,7 @@ h3{
   margin-bottom: 15%;
 }
 
-.indhold a{
+.indhold a {
   text-decoration: none;
 }
 
@@ -198,7 +203,7 @@ h3{
   /* black box shadow*/
   border-radius: 10px;
   border: var(--text-primary) 2px solid;
-  }
+}
 
 /*------------------ projekt-faner */
 
@@ -236,7 +241,7 @@ h3{
   flex-direction: row;
 }
 
-.tablinks{
+.tablinks {
   background-color: var(--dark-yellow);
 }
 
@@ -303,7 +308,8 @@ h3{
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-width: 45%; /* Adjusted to make the container responsive */
+  max-width: 45%;
+  /* Adjusted to make the container responsive */
   margin: 1rem;
 }
 
@@ -324,7 +330,8 @@ h3{
 }
 
 .projektdescription p {
-  width: 90%; /* Adjusted to make text responsive */
+  width: 90%;
+  /* Adjusted to make text responsive */
   margin: auto;
   padding: 1rem;
 }
@@ -340,7 +347,8 @@ h3{
 }
 
 .slideshow-container {
-  width: 90%; /* Adjusted to make slideshow container responsive */
+  width: 90%;
+  /* Adjusted to make slideshow container responsive */
   position: relative;
   margin: auto;
   max-height: 300px;
@@ -371,7 +379,7 @@ h3{
   right: 0;
 }
 
-.prev{
+.prev {
   left: 0;
 }
 
@@ -379,12 +387,14 @@ h3{
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
-.fade img{
+.fade img {
   width: 100%;
-  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+
 }
 
 @keyframes fade {
@@ -423,42 +433,44 @@ h3{
 }
 
 .pinkfolder video {
-  max-width: 100%; /* Set maximum width to 100% */
-  height: auto; /* Let the height scale proportionally */
+  max-width: 100%;
+  /* Set maximum width to 100% */
+  height: auto;
+  /* Let the height scale proportionally */
+  max-height: 600px;
 }
 
-.pinkimage{
+.pinkimage {
   padding: 1rem;
 }
 
-.pinkimage img{
+.pinkimage img {
   width: 100%;
   height: auto;
   border-radius: 100% 100% 0 0;
   border: 2px solid var(--text-primary)
- 
- }
+}
 
 /* about sektion */
 
-.givespace{
+.givespace {
   margin-top: 1rem;
 }
 
-.yellowbox{
+.yellowbox {
   width: 100%;
   margin: 1rem;
-  background-color:var(--bg-primary);
+  background-color: var(--bg-primary);
 }
 
-.informationelement{
+.informationelement {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
 }
 
-.informationcontainer{
+.informationcontainer {
   width: 90%;
   height: auto;
   margin: 1rem;
@@ -466,20 +478,20 @@ h3{
 
 /* til footer */
 
-.givflex{
+.givflex {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.altfont{
+.altfont {
   font-weight: bold;
   font-family: "Barlow Condensed", sans-serif;
   font-size: calc(16px + 0.390625vw);
 }
 
-.kontaktinfo a{
+.kontaktinfo a {
   text-decoration: none;
   color: var(--text-primary);
   font-family: "Montserrat", sans-serif;
@@ -494,133 +506,134 @@ h3{
     width: 92%;
   }
 
-  .browsericons{
+  .browsericons {
     opacity: 0;
   }
 
-  
 
-  .posrelcontainer{
+
+  .posrelcontainer {
     max-width: 90%;
     height: auto;
     margin-top: 1rem;
-}
+  }
 
-.indhold{
-  display: flex;
-  flex-direction: column;
-  align-items: baseline;
-}
+  .indhold {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
 
-.knap{
-  padding: 3% 5%;
-}
-.landing {
-   margin-bottom: 1rem;
- }
+  .knap {
+    padding: 3% 5%;
+  }
 
-.landingpic{
-  width: 90%;
-  height: 200px;
-}
+  .landing {
+    margin-bottom: 1rem;
+  }
 
-.indhold p {
-  margin-bottom: 5%;
-}
+  .landingpic {
+    width: 90%;
+    height: 200px;
+  }
 
-.projektsektion {
-  width: 90%;
-}
+  .indhold p {
+    margin-bottom: 5%;
+  }
 
-.projekttabs{
-  margin: 0.5rem;
-}
+  .projektsektion {
+    width: 90%;
+  }
 
-.tab button {
-  width: 80px;
-  height: 40px;
-}
+  .projekttabs {
+    margin: 0.5rem;
+  }
 
-h3{
-  font-size: calc(14px + 0.390625vw);
-}
+  .tab button {
+    width: 80px;
+    height: 40px;
+  }
 
-.tabcontainer {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-}
+  h3 {
+    font-size: calc(14px + 0.390625vw);
+  }
 
-.information {
-  max-width: 90%; 
-  margin: 1rem;
-}
+  .tabcontainer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 
-.yellowbox{
-  width: 90%;
-}
+  .information {
+    max-width: 90%;
+    margin: 1rem;
+  }
 
-.pinkindhold {
-   width: 90%;
+  .yellowbox {
+    width: 90%;
+  }
+
+  .pinkindhold {
+    width: 90%;
     margin: 0;
- }
+  }
 
- .pinkfolder{
-  display: flex;
-  justify-content: center;
-  margin-top: 0.5rem;
- }
-
- 
- .givluft{
-  margin-bottom: 1rem;
- }
-
- .billede img{
-  max-width: 150px;
-  height: auto;
-  margin-right: 1rem;
-}
-
-.kontaktinfo h2{
-  font-size: calc(16px + 0.390625vw);
-}
+  .pinkfolder {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
 
 
-.kontaktinfo .altfont{
-  font-size: calc(14px + 0.390625vw);  
-}
+  .givluft {
+    margin-bottom: 1rem;
+  }
+
+  .billede img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 1rem;
+  }
+
+  .kontaktinfo h2 {
+    font-size: calc(16px + 0.390625vw);
+  }
+
+
+  .kontaktinfo .altfont {
+    font-size: calc(14px + 0.390625vw);
+  }
 }
 
 
 
 /*medie query - til mobil */
-@media screen and (max-width: 450px){
-  .billede img{
+@media screen and (max-width: 450px) {
+  .billede img {
     max-width: 90px;
-}
+  }
 }
 
 
 /* media query - til desktop */
 @media screen and (min-width: 800px) {
 
-.windowcontainer {
-  padding: 5px 20px;
+  .windowcontainer {
+    padding: 5px 20px;
   }
-  
 
-.knap{
-  padding: 2% 5%;
-}
-  
+
+  .knap {
+    padding: 2% 5%;
+  }
+
   .knap:hover {
     background-image: linear-gradient(to right, #e58fab, #8864e3);
     color: var(--text-secondary);
     box-shadow: -2px 2px 4px var(--dark-yellow);
   }
 
-  .kontaktinfo p :hover{
+  .kontaktinfo p :hover {
     color: var(--purple);
   }
 
@@ -628,7 +641,7 @@ h3{
     position: relative;
   }
 
-  .posrelcontainer{
+  .posrelcontainer {
     position: absolute;
     max-width: 40%;
     height: auto;
@@ -643,31 +656,30 @@ h3{
     z-index: 444;
   }
 
-  .tablinks:hover{
+  .tablinks:hover {
     background: linear-gradient(to right, #fcf1cf, #f5d6e0);
     transition: 0.2s ease;
     text-decoration: underline dotted var(--pink) 4px;
   }
 
-/* tilføj en mørkeere baggrudn ved hover */
-.prev:hover,
-.next:hover {
-  background-color: var(--pink);
-  color: var(--text-primary);
-  opacity: 0.5;
+  /* tilføj en mørkeere baggrudn ved hover */
+  .prev:hover,
+  .next:hover {
+    background-color: var(--pink);
+    color: var(--text-primary);
+    opacity: 0.5;
+  }
+
+
+  .pinkfolder {
+    margin: 1rem;
+  }
+
+
+  .billede img {
+    width: 170px;
+    height: auto;
+  }
+
+
 }
-
-
-.pinkfolder {
-  margin: 1rem;
-}
-
-
-.billede img{
-  width: 170px;
-  height: auto;
-}
-
-
-}
-

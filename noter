@@ -1,0 +1,85 @@
+                    <div class="smallbox yellowbox">
+                        <div class="windowcontainer"> <!-- til lilla header-->
+                            <div></div> <!-- intentionalle empty div for layout purposes-->
+                            <div class="browsericons">
+                                <img src="images/minus-solid.svg" alt="minimize">
+                                <img src="images/window-restore-regular.svg" alt="maximize">
+                                <img src="images/square-xmark-solid.svg" alt="exit window">
+                            </div>
+                        </div>
+
+                        <div class="informationelement">
+                            <div class="informationcontainer">
+                                <h2>Men hvem er jeg så?</h2>
+                                <p> Hej, jeg er Anne-Mette, og jeg er multimediedesigner – eller som jeg bedst kan
+                                    lide at sige det: en kreativ sjæl med en passion for alt, der har med design,
+                                    teknologi og visuelle oplevelser at gøre. <br><br>
+
+                                    Under min uddannelse har jeg lært at mestre både de tekniske og kreative
+                                    aspekter af design. Jeg har arbejdet med værktøjer som <span>Photoshop og
+                                        Illustrator</span>
+                                    til at skabe visuelle designs, men også fordybet mig i at bringe mine ideer til
+                                    live i <span>Figma.</span> Jeg har desuden fået kendskab til kode, især
+                                    <span>HTML, CSS og
+                                        JavaScript</span>, hvilket gør mig i stand til at forstå og bygge
+                                    brugervenlige
+                                    digitale løsninger.<br><br>
+
+                                    Derudover har jeg i min praktik arbejdet i <span>Vyond, After
+                                        Effects og Premiere Pro</span>, hvor jeg har skabt dynamiske og
+                                    engagerende animationsvideoer. Det var en utrolig lærerig periode, hvor jeg
+                                    virkelig fik lov
+                                    til at bruge både min kreative og tekniske side – og det er netop det, jeg
+                                    elsker ved design: at kombinere det æstetiske med det funktionelle.<br><br>
+
+                                    Jeg er altid på udkig efter nye udfordringer, hvor jeg kan udvikle mine
+                                    færdigheder og skabe både visuelt imponerende og funktionelle løsninger.
+                                    Hvis du vil høre mere om mine erfaringer, eller hvis du tror, vi kunne skabe
+                                    noget spændende sammen, kan du finde mig på <a
+                                        href="www.linkedin.com/in/anne-mette-larsen-724533184" target="_blank"
+                                        style="color: #e58fab;">
+                                        LinkedIn</a>
+                                </p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <p>Dette gruppeprojekt tog udgangspunkt i <span>Jyllands Park
+                                                        Zoo</span>, hvor
+                                                    vi udviklede en PWA – en mobilvenlig webapp – med fokus på
+                                                    integration af betalingsarmbånd. Min gruppe og jeg arbejdede
+                                                    især med at designe logo, ikoner og illustrationer for at skabe
+                                                    en stærk visuel identitet. <br><br>Vi tog også højde for
+                                                    usability-faktorer, da appen skulle bruges i en zoologisk have –
+                                                    blandt andet ved at vælge farver og kontraster, der sikrer god
+                                                    læsbarhed i sollys. Designet skulle både være intuitivt og
+                                                    funktionelt for at forbedre brugeroplevelsen i et udendørsmiljø.
+                                                    <br><br>
+
+                                                    Projektet er udelukkende designet til mobile skærmstørrelser og kan
+                                                    ses her: <span>https://jpz.amsl.dk/</span>
+                                                </p>
+
+
+
+
+                                                <p> <br>Nedenfor præsenteres en lille samling af mine favoritprojekter,
+                                som jeg har været med til at udvikle som multimediedesigner.
+                                Jeg håber, at disse projekter vil demonstrere min passion for faget og give et indblik i
+                                mine kompetencer.
+                                Måske er det netop nogle af de kompetencer, du leder efter? </p>

@@ -3,30 +3,30 @@
 
 // her er JS til projekt tab - knapperne //
 
-document.addEventListener("DOMContentLoaded", function() {
-// Sætter den første fane som aktiv ved sidenbelastning
-// Finder den første faneknap og tilføjer "active" klassen for at markere den som aktiv
-  document.querySelector(".tablinks").classList.add("active"); 
+document.addEventListener("DOMContentLoaded", function () {
+  // Sætter den første fane som aktiv ved sidenbelastning
+  // Finder den første faneknap og tilføjer "active" klassen for at markere den som aktiv
+  document.querySelector(".tablinks").classList.add("active");
   // Finder det tilsvarende faneelement og tilføjer "active" klassen for at vise dets indhold
-  document.getElementById("tab1").classList.add("active"); 
+  document.getElementById("tab1").classList.add("active");
 
   // Tilføjer en hændelseslytter til fane knapperne
   var tabButtons = document.querySelectorAll(".tablinks");
-  tabButtons.forEach(function(button) {
-    button.addEventListener("click", function() {
+  tabButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
       // Fjerner "active" klassen fra alle fane knapper og faneelementer
-      tabButtons.forEach(function(btn) {
+      tabButtons.forEach(function (btn) {
         btn.classList.remove("active");
       });
-      document.querySelectorAll(".tabcontent").forEach(function(tabContent) {
+      document.querySelectorAll(".tabcontent").forEach(function (tabContent) {
         tabContent.classList.remove("active");
       });
 
       /* Tilføjer "active" klassen til den klikkede fane knap og det tilsvarende faneelement
       Henter data-tab attributten for den klikkede knap for at finde det tilsvarende faneelement */
-        var tabId = this.getAttribute("data-tab"); 
+      var tabId = this.getAttribute("data-tab");
       /* Tilføjer "active" klassen til den klikkede knap for at markere den som aktiv. */
-      this.classList.add("active"); 
+      this.classList.add("active");
       /* Finder det tilsvarende faneelement og tilføjer "active" klassen for at vise dets indhold */
       document.getElementById(tabId).classList.add("active");
     });
@@ -77,7 +77,7 @@ function showSlidesNippon(n) {
 showSlidesNippon(slideIndexNippon);
 
 // Automatisk skift billede hvert 6. sekund
-setInterval(function() {
+setInterval(function () {
   plusSlidesNippon(1); // Skifter til næste slide
 }, 6000);
 
@@ -108,7 +108,7 @@ function showSlidesFrontsession(n) {
 
 showSlidesFrontsession(slideIndexFrontsession);
 
-setInterval(function() {
+setInterval(function () {
   plusSlidesFrontsession(1); // Skifter til næste slide
 }, 6000);
 
@@ -136,8 +136,38 @@ function showSlidesAadalen(n) {
 
 showSlidesAadalen(slideIndexAadalen);
 
-setInterval(function() {
+setInterval(function () {
   plusSlidesAadalen(1); // Skifter til næste slide
 }, 6000);
+
+
+/* Aadalen Gallery */
+let slideIndexMomu = 1;
+
+function plusSlidesMomu(n) {
+  showSlidesMomu(slideIndexMomu += n);
+}
+
+function currentSlideMomu(n) {
+  showSlidesMomu(slideIndexMomu = n);
+}
+
+function showSlidesMomu(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides-Momu");
+  if (n > slides.length) { slideIndexMomu = 1 }
+  if (n < 1) { slideIndexMomu = slides.length }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndexMomu - 1].style.display = "block";
+}
+
+showSlidesMomu(slideIndexMomu);
+
+setInterval(function () {
+  plusSlidesMomu(1); // Skifter til næste slide
+}, 6000);
+
 
 
